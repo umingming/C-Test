@@ -29,7 +29,8 @@ namespace SocketClientTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            textBox1.Focus();
+            Log("클라이언트 로드됨!!");
         }
 
         private void Button1_Click(object sender, EventArgs e)
