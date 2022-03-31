@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SocketClientTest",
+    "\\SocketClientTest2"
   ],
-  "SelectedNode": "\\C:\\Users\\user\\Source\\Repos\\umingming\\C-sharpTest",
+  "SelectedNode": "\\SocketClientTest2\\SocketClientTest2.csproj",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,11 @@
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\bin\Debug\ScreenCapture.exe.config
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\bin\Debug\ScreenCapture.exe
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\bin\Debug\ScreenCapture.pdb
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.Form1.resources
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.Properties.Resources.resources
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.csproj.GenerateResource.cache
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.exe
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ScreenCapture\obj\Debug\ScreenCapture.pdb
