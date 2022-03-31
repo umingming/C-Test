@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\bin\Debug\SocketClientTest2.exe.config
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\bin\Debug\SocketClientTest2.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\bin\Debug\SocketClientTest2.pdb
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.Form1.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.Properties.Resources.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.csproj.GenerateResource.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClientTest2\obj\Debug\SocketClientTest2.pdb
