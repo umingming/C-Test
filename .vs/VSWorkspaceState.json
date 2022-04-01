@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ScreenCapture",
     "\\SocketClientTest",
     "\\SocketClientTest2"
   ],
-  "SelectedNode": "\\SocketClientTest2\\SocketClientTest2.csproj",
+  "SelectedNode": "\\ScreenCapture\\ScreenCapture.csproj",
   "PreviewInSolutionExplorer": false
 }
