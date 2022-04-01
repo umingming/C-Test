@@ -107,5 +107,10 @@ namespace Calculator
             }
             label2.Text = Convert.ToString(result);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
