@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Calculator",
     "\\ScreenCapture",
     "\\SocketClientTest",
     "\\SocketClientTest2"
   ],
-  "SelectedNode": "\\ScreenCapture\\ScreenCapture.csproj",
+  "SelectedNode": "\\Calculator\\Form1.Designer.cs",
   "PreviewInSolutionExplorer": false
 }
