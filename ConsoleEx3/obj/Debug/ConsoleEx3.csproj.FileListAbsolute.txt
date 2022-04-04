@@ -1,0 +1,6 @@
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ConsoleEx3\bin\Debug\ConsoleEx3.exe
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ConsoleEx3\bin\Debug\ConsoleEx3.pdb
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ConsoleEx3\obj\Debug\ConsoleEx3.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ConsoleEx3\obj\Debug\ConsoleEx3.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ConsoleEx3\obj\Debug\ConsoleEx3.exe
+C:\Users\user\Source\Repos\umingming\C-sharpTest\ConsoleEx3\obj\Debug\ConsoleEx3.pdb
