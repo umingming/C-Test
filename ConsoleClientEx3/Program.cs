@@ -27,18 +27,29 @@ namespace ConsoleClientEx3
 
         private void communicate()
         {
-            throw new NotImplementedException();
+            while((msg = Console.ReadLine()) != null)
+            {
+                byte[] byteData = new byte[msg.Length];
+                byteData = Encoding.UTF8.GetBytes(msg + "\n");
+                client.GetStream().Write(byteData, 0, byteData.Length);
+
+                Console.Write("{0} \n ☞ ", msg);
+            }
         }
 
         private void setClient()
         {
-            throw new NotImplementedException();
+            byte[] byteData = new byte[name.Length];
+            byteData = Encoding.UTF8.GetBytes(name);
+            client.GetStream().Write(byteData, 0, byteData.Length);
+
+            Console.WriteLine("[통신 시작] {0}님 환영합니다. \n ☞ ", name);
         }
 
         private void accessServer()
         {
             Console.WriteLine("[시스템 시작] Port 번호를 입력하세요. \n ☞ ");
-            port = Console.Read();
+            port = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("[시스템 시작] IP 번호를 입력하세요. \n ☞ ");
             ip = Console.ReadLine();
@@ -49,7 +60,10 @@ namespace ConsoleClientEx3
             Console.WriteLine("[서버 접속 중] 사용자 이름을 입력해주세요. \n ☞ ");
             name = Console.ReadLine();
 
-            throw new NotImplementedException();
+            byte[] byteData = new byte[name.Length];
+            byteData = Encoding.UTF8.GetBytes(name + "\n");
+
+            client.GetStream().Write(byteData, 0, byteData.Length);
         }
 
         static void Main(string[] args)
