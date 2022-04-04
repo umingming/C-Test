@@ -87,10 +87,13 @@ namespace ConsoleClientEx2
             */
 
             Console.WriteLine("[시스템 시작] Port 번호를 입력하세요?. \n ☞ ");
-            int port = Console.Read();
+            int port = Convert.ToInt32(Console.ReadLine());
+//          Console.ReadLine();
 
             Console.WriteLine("[시스템 시작] IP 번호를 입력하세요. \n ☞ ");
             String ip = Console.ReadLine();
+
+            Console.WriteLine(ip);
 
             client = new TcpClient();
             client.Connect(ip, port);
