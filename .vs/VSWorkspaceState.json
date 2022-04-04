@@ -1,11 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Calculator",
-    "\\ScreenCapture",
+    "\\ConsoleClientEx1",
+    "\\ConsoleClientEx2",
+    "\\ConsoleClientEx3",
+    "\\ConsoleEx1",
+    "\\ConsoleEx2",
+    "\\ConsoleEx3",
+    "\\ConsoleServerEx1",
     "\\SocketClientTest",
     "\\SocketClientTest2"
   ],
-  "SelectedNode": "\\Calculator\\Form1.Designer.cs",
+  "SelectedNode": "\\ConsoleClientEx1\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

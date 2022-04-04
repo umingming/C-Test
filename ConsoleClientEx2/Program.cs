@@ -8,6 +8,7 @@ namespace ConsoleClientEx2
     internal class Program
     {
         static TcpClient client = null;
+        static string name;
 
         static void Main(string[] args)
         {
@@ -78,10 +79,29 @@ namespace ConsoleClientEx2
 
         static private void Connect()
         {
+            /*
             client = new TcpClient();
             client.Connect("127.0.0.1", 1234);
             Console.WriteLine("서버 연결 성공! 메시지 입력하셈ㅋ");
             Console.ReadKey();
+            */
+
+            Console.WriteLine("[시스템 시작] Port 번호를 입력하세요?. \n ☞ ");
+            int port = Console.Read();
+
+            Console.WriteLine("[시스템 시작] IP 번호를 입력하세요. \n ☞ ");
+            String ip = Console.ReadLine();
+
+            client = new TcpClient();
+            client.Connect(ip, port);
+
+            Console.WriteLine("[서버 접속 중] 사용자 이름을 입력해주세요. \n ☞ ");
+            name = Console.ReadLine() + "\n";
+
+            byte[] byteData = new byte[name.Length];
+            byteData = Encoding.UTF8.GetBytes(name);
+
+            client.GetStream().Write(byteData, 0, byteData.Length);
         }
     }
 }
