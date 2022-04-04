@@ -33,7 +33,14 @@ namespace ConsoleClientEx3
                 byteData = Encoding.UTF8.GetBytes(msg + "\n");
                 client.GetStream().Write(byteData, 0, byteData.Length);
 
-                Console.Write("{0} \n ☞ ", msg);
+                byteData = new Byte[256];
+                String responseData = String.Empty;
+                Int32 bytes = client.GetStream().Read(byteData, 0, byteData.Length);
+                responseData = System.Text.Encoding.UTF8.GetString(byteData, 0, bytes);
+
+                Console.Write("{0} \n ☞ ", responseData);
+
+//              Console.Write("{0} \n ☞ ", msg);
             }
         }
 
@@ -43,21 +50,21 @@ namespace ConsoleClientEx3
             byteData = Encoding.UTF8.GetBytes(name);
             client.GetStream().Write(byteData, 0, byteData.Length);
 
-            Console.WriteLine("[통신 시작] {0}님 환영합니다. \n ☞ ", name);
+            Console.Write("[통신 시작] {0}님 환영합니다. \n ☞ ", name);
         }
 
         private void accessServer()
         {
-            Console.WriteLine("[시스템 시작] Port 번호를 입력하세요. \n ☞ ");
+            Console.Write("[시스템 시작] Port 번호를 입력하세요. \n ☞ ");
             port = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("[시스템 시작] IP 번호를 입력하세요. \n ☞ ");
+            Console.Write("[시스템 시작] IP 번호를 입력하세요. \n ☞ ");
             ip = Console.ReadLine();
 
             client = new TcpClient();
             client.Connect(ip, port);
 
-            Console.WriteLine("[서버 접속 중] 사용자 이름을 입력해주세요. \n ☞ ");
+            Console.Write("[서버 접속 중] 사용자 이름을 입력해주세요. \n ☞ ");
             name = Console.ReadLine();
 
             byte[] byteData = new byte[name.Length];
