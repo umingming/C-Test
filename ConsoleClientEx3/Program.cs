@@ -38,7 +38,7 @@ namespace ConsoleClientEx3
                 Int32 bytes = client.GetStream().Read(byteData, 0, byteData.Length);
                 responseData = System.Text.Encoding.UTF8.GetString(byteData, 0, bytes);
 
-                Console.Write("{0} \n ☞ ", responseData);
+                Console.Write("{0} ☞ ", responseData);
 
 //              Console.Write("{0} \n ☞ ", msg);
             }
