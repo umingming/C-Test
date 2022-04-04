@@ -13,14 +13,18 @@ namespace ConsoleClientEx1
             TcpClient client = new TcpClient();
 
             client.Connect("127.0.0.1", 1234);
-            byte[] buf = Encoding.Default.GetBytes("유미");
+            byte[] name = Encoding.UTF8.GetBytes("유미");
 
-            client.GetStream().Write(buf, 0, buf.Length);
+            client.GetStream().Write(name, 0, name.Length);
 
-            byte[] buf2 = Encoding.Default.GetBytes("안녕ㅋ");
-
-            client.GetStream().Write(buf2, 0, buf2.Length);
             client.Close();
+
+            Console.WriteLine(System.Text.Encoding.UTF8.GetString(name));
+            for (int i = 0; i < name.Length; i++)
+            {
+                Console.Write(name[i].ToString() + "//");
+            }
+            Console.ReadLine();
         }
     }
 }
