@@ -67,7 +67,7 @@ namespace ConsoleClientEx2
         static private void SendMessage()
         {
             Console.WriteLine("메시지 입력");
-            string message = Console.ReadLine();
+            string message = Console.ReadLine() + "\n";
             byte[] byteData = new byte[message.Length];
             byteData = Encoding.UTF8.GetBytes(message);
 
@@ -83,7 +83,5 @@ namespace ConsoleClientEx2
             Console.WriteLine("서버 연결 성공! 메시지 입력하셈ㅋ");
             Console.ReadKey();
         }
-
-
     }
 }
