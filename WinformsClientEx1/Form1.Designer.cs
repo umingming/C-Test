@@ -38,8 +38,20 @@
             this.textChat = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textMsg = new System.Windows.Forms.TextBox();
+            this.selectMsg = new System.Windows.Forms.ComboBox();
+            this.btnRemove = new System.Windows.Forms.Button();
             btnAccess = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnAccess
+            // 
+            btnAccess.Location = new System.Drawing.Point(110, 73);
+            btnAccess.Name = "btnAccess";
+            btnAccess.Size = new System.Drawing.Size(325, 28);
+            btnAccess.TabIndex = 4;
+            btnAccess.Text = "접속";
+            btnAccess.UseVisualStyleBackColor = true;
+            btnAccess.Click += new System.EventHandler(this.button1_Click);
             // 
             // textPort
             // 
@@ -73,19 +85,9 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "IP";
             // 
-            // btnAccess
-            // 
-            btnAccess.Location = new System.Drawing.Point(110, 73);
-            btnAccess.Name = "btnAccess";
-            btnAccess.Size = new System.Drawing.Size(325, 28);
-            btnAccess.TabIndex = 4;
-            btnAccess.Text = "접속";
-            btnAccess.UseVisualStyleBackColor = true;
-            btnAccess.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(476, 643);
+            this.btnInput.Location = new System.Drawing.Point(476, 386);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(74, 28);
             this.btnInput.TabIndex = 5;
@@ -105,7 +107,7 @@
             this.textChat.Location = new System.Drawing.Point(49, 123);
             this.textChat.Multiline = true;
             this.textChat.Name = "textChat";
-            this.textChat.Size = new System.Drawing.Size(501, 501);
+            this.textChat.Size = new System.Drawing.Size(501, 247);
             this.textChat.TabIndex = 7;
             // 
             // label3
@@ -119,16 +121,37 @@
             // 
             // textMsg
             // 
-            this.textMsg.Location = new System.Drawing.Point(49, 643);
+            this.textMsg.Location = new System.Drawing.Point(49, 386);
             this.textMsg.Name = "textMsg";
             this.textMsg.Size = new System.Drawing.Size(421, 28);
             this.textMsg.TabIndex = 9;
+            // 
+            // selectMsg
+            // 
+            this.selectMsg.FormattingEnabled = true;
+            this.selectMsg.Location = new System.Drawing.Point(49, 436);
+            this.selectMsg.Name = "selectMsg";
+            this.selectMsg.Size = new System.Drawing.Size(421, 26);
+            this.selectMsg.TabIndex = 10;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Enabled = false;
+            this.btnRemove.Location = new System.Drawing.Point(476, 434);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(74, 28);
+            this.btnRemove.TabIndex = 11;
+            this.btnRemove.Text = "삭제";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 696);
+            this.ClientSize = new System.Drawing.Size(576, 487);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.selectMsg);
             this.Controls.Add(this.textMsg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textChat);
@@ -157,6 +180,8 @@
         private System.Windows.Forms.TextBox textChat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textMsg;
+        private System.Windows.Forms.ComboBox selectMsg;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
 

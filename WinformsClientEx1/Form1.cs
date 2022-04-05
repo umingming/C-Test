@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,14 +15,15 @@ namespace WinformsClientEx1
     {
         TcpClient client;
 
-        String name;
-        String msg;
-        String ip;
         int port;
+        String ip;
+        String name;
+        ArrayList msgList;
 
         public Form1()
         {
             InitializeComponent();
+            msgList = new ArrayList(100);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,19 +44,50 @@ namespace WinformsClientEx1
 
         private void btnInput_Click(object sender, EventArgs e)
         {
-            msg = textMsg.Text;
-            textMsg.Text = "";
+            if(textMsg != null)
+            {
+                String msg = textMsg.Text;
+                textMsg.Text = "";
 
-            byte[] byteData = new byte[msg.Length];
-            byteData = Encoding.UTF8.GetBytes(msg + "\n");
-            client.GetStream().Write(byteData, 0, byteData.Length);
+                byte[] byteData = new byte[msg.Length];
+                byteData = Encoding.UTF8.GetBytes(msg + "\n");
+                client.GetStream().Write(byteData, 0, byteData.Length);
 
-            byteData = new Byte[256];
-            String responseData = String.Empty;
-            Int32 bytes = client.GetStream().Read(byteData, 0, byteData.Length);
-            responseData = System.Text.Encoding.UTF8.GetString(byteData, 0, bytes);
+                byteData = new Byte[256];
+                Int32 bytes = client.GetStream().Read(byteData, 0, byteData.Length);
+                msgList.Add(System.Text.Encoding.UTF8.GetString(byteData, 0, bytes));
 
-            textChat.Text += responseData;
+                selectMsg.Items.Add(msgList[msgList.Count - 1]);
+                textChat.Text += msgList[msgList.Count - 1];
+            }
+                
+            if(msgList.Count == 4)
+            {
+                btnRemove.Enabled = true;
+                btnInput.Enabled = false;                
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int index = (int)selectMsg.SelectedIndex;
+            msgList.Remove(index);
+            selectMsg.Items.RemoveAt(index);
+
+            UpdateChat();
+
+            btnRemove.Enabled = false;
+            btnInput.Enabled = true;
+        }
+
+        private void UpdateChat()
+        {
+            textChat.Text = "";
+
+            for(int i=0; i<msgList.Count; i++)
+            {
+                textChat.Text += msgList[i];
+            }
         }
     }
 }
