@@ -1,3 +1,4 @@
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\bin\Debug\WinformsClientEx1.exe.config
 C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\bin\Debug\WinformsClientEx1.exe
 C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\bin\Debug\WinformsClientEx1.pdb
 C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Debug\WinformsClientEx1.csproj.AssemblyReference.cache

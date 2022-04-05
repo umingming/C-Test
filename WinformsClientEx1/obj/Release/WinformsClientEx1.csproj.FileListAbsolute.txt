@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\bin\Release\WinformsClientEx1.exe.config
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\bin\Release\WinformsClientEx1.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\bin\Release\WinformsClientEx1.pdb
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Release\WinformsClientEx1.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Release\WinformsClientEx1.Form1.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Release\WinformsClientEx1.Properties.Resources.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Release\WinformsClientEx1.csproj.GenerateResource.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Release\WinformsClientEx1.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Release\WinformsClientEx1.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Release\WinformsClientEx1.pdb
