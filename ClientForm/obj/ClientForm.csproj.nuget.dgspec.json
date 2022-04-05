@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Source\\Repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj": {}
+    "C:\\Users\\user\\source\\repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Source\\Repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj": {
+    "C:\\Users\\user\\source\\repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj",
         "projectName": "ClientForm",
-        "projectPath": "C:\\Users\\user\\Source\\Repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\umingming\\C-sharpTest\\ClientForm\\ClientForm.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Source\\Repos\\umingming\\C-sharpTest\\ClientForm\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\umingming\\C-sharpTest\\ClientForm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -47,7 +47,7 @@ namespace ConsoleClientEx3
         private void setClient()
         {
             byte[] byteData = new byte[name.Length];
-            byteData = Encoding.UTF8.GetBytes(name);
+            byteData = Encoding.UTF8.GetBytes(name + "\n");
             client.GetStream().Write(byteData, 0, byteData.Length);
 
             Console.Write("[통신 시작] {0}님 환영합니다. \n ☞ ", name);
@@ -66,11 +66,6 @@ namespace ConsoleClientEx3
 
             Console.Write("[서버 접속 중] 사용자 이름을 입력해주세요. \n ☞ ");
             name = Console.ReadLine();
-
-            byte[] byteData = new byte[name.Length];
-            byteData = Encoding.UTF8.GetBytes(name + "\n");
-
-            client.GetStream().Write(byteData, 0, byteData.Length);
         }
 
         static void Main(string[] args)
