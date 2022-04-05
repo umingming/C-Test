@@ -28,20 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button btnAccess;
+            this.textPort = new System.Windows.Forms.TextBox();
+            this.textIp = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnInput = new System.Windows.Forms.Button();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.textChat = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textMsg = new System.Windows.Forms.TextBox();
+            btnAccess = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // textPort
+            // 
+            this.textPort.Location = new System.Drawing.Point(59, 24);
+            this.textPort.Name = "textPort";
+            this.textPort.Size = new System.Drawing.Size(118, 28);
+            this.textPort.TabIndex = 0;
+            // 
+            // textIp
+            // 
+            this.textIp.Location = new System.Drawing.Point(227, 24);
+            this.textIp.Name = "textIp";
+            this.textIp.Size = new System.Drawing.Size(123, 28);
+            this.textIp.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Port";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(199, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "IP";
+            // 
+            // btnAccess
+            // 
+            btnAccess.Location = new System.Drawing.Point(110, 73);
+            btnAccess.Name = "btnAccess";
+            btnAccess.Size = new System.Drawing.Size(325, 28);
+            btnAccess.TabIndex = 4;
+            btnAccess.Text = "접속";
+            btnAccess.UseVisualStyleBackColor = true;
+            btnAccess.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnInput
+            // 
+            this.btnInput.Location = new System.Drawing.Point(476, 643);
+            this.btnInput.Name = "btnInput";
+            this.btnInput.Size = new System.Drawing.Size(74, 28);
+            this.btnInput.TabIndex = 5;
+            this.btnInput.Text = "입력";
+            this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
+            // 
+            // textName
+            // 
+            this.textName.Location = new System.Drawing.Point(432, 24);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(118, 28);
+            this.textName.TabIndex = 6;
+            // 
+            // textChat
+            // 
+            this.textChat.Location = new System.Drawing.Point(49, 123);
+            this.textChat.Multiline = true;
+            this.textChat.Name = "textChat";
+            this.textChat.Size = new System.Drawing.Size(501, 501);
+            this.textChat.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(371, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Name";
+            // 
+            // textMsg
+            // 
+            this.textMsg.Location = new System.Drawing.Point(49, 643);
+            this.textMsg.Name = "textMsg";
+            this.textMsg.Size = new System.Drawing.Size(421, 28);
+            this.textMsg.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 208);
+            this.ClientSize = new System.Drawing.Size(576, 696);
+            this.Controls.Add(this.textMsg);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textChat);
+            this.Controls.Add(this.textName);
+            this.Controls.Add(this.btnInput);
+            this.Controls.Add(btnAccess);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textIp);
+            this.Controls.Add(this.textPort);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ChatChat";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textPort;
+        private System.Windows.Forms.TextBox textIp;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnInput;
+        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.TextBox textChat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textMsg;
     }
 }
 
