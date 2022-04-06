@@ -8,3 +8,4 @@ C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Debug\Win
 C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Debug\WinformsClientEx1.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Debug\WinformsClientEx1.exe
 C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Debug\WinformsClientEx1.pdb
+C:\Users\user\source\repos\umingming\C-sharpTest\WinformsClientEx1\obj\Debug\WinformsClientEx1.Form3.resources

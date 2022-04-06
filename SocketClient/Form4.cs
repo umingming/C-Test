@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace SocketClient
 {
-    public partial class Form1 : Form
+    public partial class Form4 : SocketClient.Form1
     {
-        public Form1()
+        public Form4()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
