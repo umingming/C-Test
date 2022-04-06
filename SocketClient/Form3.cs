@@ -82,5 +82,13 @@ namespace SocketClient
                 textContent.Text += msgList[i];
             }
         }
+
+        private void IsEnterKey(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnInput_Click(sender, e);
+            }
+        }
     }
 }
