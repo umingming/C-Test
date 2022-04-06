@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\umingming\C-sharpTest\ClientForm\obj\Debug\net6.0-windows\ClientForm.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\ClientForm\obj\Debug\net6.0-windows\ClientForm.ClientForm.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\ClientForm\obj\Debug\net6.0-windows\ClientForm.csproj.GenerateResource.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\ClientForm\obj\Debug\net6.0-windows\ClientForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\umingming\C-sharpTest\ClientForm\obj\Debug\net6.0-windows\ClientForm.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\ClientForm\obj\Debug\net6.0-windows\ClientForm.AssemblyInfo.cs
+C:\Users\user\source\repos\umingming\C-sharpTest\ClientForm\obj\Debug\net6.0-windows\ClientForm.csproj.CoreCompileInputs.cache

@@ -50,6 +50,11 @@ namespace SocketClient
             {
                 btnRemove.Enabled = true;
                 btnInput.Enabled = false;
+                btnRemove.Visible = true;
+                selectMsg.Visible = true;
+                textMsg.Visible = false;
+                btnInput.Visible = false;
+                label3.Visible = false;
             }
         }
 
@@ -63,6 +68,11 @@ namespace SocketClient
 
             btnRemove.Enabled = false;
             btnInput.Enabled = true;
+            btnRemove.Visible = false;
+            selectMsg.Visible = false;
+            textMsg.Visible = true;
+            btnInput.Visible = true;
+            label3.Visible = true;
         }
 
         private void UpdateChat()

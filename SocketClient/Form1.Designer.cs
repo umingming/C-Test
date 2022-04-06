@@ -37,19 +37,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnStart
             // 
-            this.btnStart.BackColor = System.Drawing.Color.White;
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("D2Coding", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Image = ((System.Drawing.Image)(resources.GetObject("btnStart.Image")));
-            this.btnStart.Location = new System.Drawing.Point(171, 246);
+            this.btnStart.Location = new System.Drawing.Point(110, 276);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(153, 45);
+            this.btnStart.Size = new System.Drawing.Size(295, 56);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start!";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -58,49 +56,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D2Coding", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.label1.Location = new System.Drawing.Point(66, 178);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 26);
+            this.label1.Size = new System.Drawing.Size(78, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Port :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("D2Coding", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(287, 178);
+            this.label2.Location = new System.Drawing.Point(275, 178);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 26);
+            this.label2.Size = new System.Drawing.Size(45, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "IP :";
             // 
             // textPort
             // 
             this.textPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textPort.Font = new System.Drawing.Font("D2Coding", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textPort.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.textPort.Location = new System.Drawing.Point(138, 178);
             this.textPort.Name = "textPort";
-            this.textPort.Size = new System.Drawing.Size(96, 26);
+            this.textPort.Size = new System.Drawing.Size(138, 31);
             this.textPort.TabIndex = 3;
             // 
             // textIp
             // 
             this.textIp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textIp.Font = new System.Drawing.Font("D2Coding", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textIp.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textIp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.textIp.Location = new System.Drawing.Point(338, 178);
+            this.textIp.Location = new System.Drawing.Point(327, 178);
             this.textIp.Name = "textIp";
-            this.textIp.Size = new System.Drawing.Size(108, 26);
+            this.textIp.Size = new System.Drawing.Size(126, 26);
             this.textIp.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("D2Coding", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(132, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 2);
@@ -109,39 +107,31 @@
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("D2Coding", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(332, 204);
+            this.label4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(321, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 2);
+            this.label4.Size = new System.Drawing.Size(132, 2);
             this.label4.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(211)))));
-            this.label5.Font = new System.Drawing.Font("D2Coding", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("Arial Black", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.Location = new System.Drawing.Point(112, 45);
+            this.label5.Location = new System.Drawing.Point(97, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(293, 55);
+            this.label5.Size = new System.Drawing.Size(321, 75);
             this.label5.TabIndex = 7;
             this.label5.Text = "ChatChat";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(43, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(340, 17);
-            this.label6.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(520, 417);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(520, 505);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -171,7 +161,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }
 
