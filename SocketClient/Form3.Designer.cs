@@ -75,10 +75,10 @@
             this.btnInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInput.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInput.ForeColor = System.Drawing.Color.White;
-            this.btnInput.Location = new System.Drawing.Point(365, 397);
+            this.btnInput.Location = new System.Drawing.Point(360, 397);
             this.btnInput.Margin = new System.Windows.Forms.Padding(0);
             this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(95, 36);
+            this.btnInput.Size = new System.Drawing.Size(100, 36);
             this.btnInput.TabIndex = 11;
             this.btnInput.Text = "Send";
             this.btnInput.UseVisualStyleBackColor = false;
@@ -88,9 +88,9 @@
             // 
             this.selectMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.selectMsg.FormattingEnabled = true;
-            this.selectMsg.Location = new System.Drawing.Point(21, 196);
+            this.selectMsg.Location = new System.Drawing.Point(62, 401);
             this.selectMsg.Name = "selectMsg";
-            this.selectMsg.Size = new System.Drawing.Size(321, 26);
+            this.selectMsg.Size = new System.Drawing.Size(291, 26);
             this.selectMsg.TabIndex = 12;
             this.selectMsg.Visible = false;
             // 
@@ -100,10 +100,10 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(365, 397);
+            this.btnRemove.Location = new System.Drawing.Point(360, 397);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(0);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(95, 36);
+            this.btnRemove.Size = new System.Drawing.Size(100, 36);
             this.btnRemove.TabIndex = 13;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -114,7 +114,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(235)))));
             this.panel1.Controls.Add(this.textContent);
-            this.panel1.Controls.Add(this.selectMsg);
             this.panel1.Location = new System.Drawing.Point(64, 128);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(401, 258);
@@ -140,11 +139,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 505);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.selectMsg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textMsg);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnInput);
             this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnInput);
             this.Name = "Form3";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Form3_Load);
