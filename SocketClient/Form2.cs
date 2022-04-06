@@ -40,5 +40,10 @@ namespace SocketClient
         {
 
         }
+
+        private void textName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

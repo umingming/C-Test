@@ -50,10 +50,11 @@
             this.textName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textName.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.textName.Location = new System.Drawing.Point(305, 173);
+            this.textName.Location = new System.Drawing.Point(299, 173);
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(128, 30);
             this.textName.TabIndex = 7;
+            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // label1
             // 

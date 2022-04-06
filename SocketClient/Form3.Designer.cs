@@ -45,7 +45,7 @@
             this.textContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(235)))));
             this.textContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textContent.Enabled = false;
-            this.textContent.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textContent.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textContent.ForeColor = System.Drawing.Color.Black;
             this.textContent.Location = new System.Drawing.Point(3, 8);
             this.textContent.Multiline = true;
@@ -152,8 +152,8 @@
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.textMsg);
             this.Controls.Add(this.selectMsg);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
-            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
