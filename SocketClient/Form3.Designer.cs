@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.textContent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,7 +38,14 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textContent
@@ -45,30 +53,31 @@
             this.textContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(235)))));
             this.textContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textContent.Enabled = false;
-            this.textContent.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textContent.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textContent.ForeColor = System.Drawing.Color.Black;
-            this.textContent.Location = new System.Drawing.Point(3, 8);
+            this.textContent.Location = new System.Drawing.Point(12, 12);
             this.textContent.Multiline = true;
             this.textContent.Name = "textContent";
-            this.textContent.Size = new System.Drawing.Size(393, 228);
+            this.textContent.Size = new System.Drawing.Size(385, 221);
             this.textContent.TabIndex = 0;
             // 
             // label3
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(67, 415);
+            this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Location = new System.Drawing.Point(67, 386);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(295, 2);
+            this.label3.Size = new System.Drawing.Size(270, 29);
             this.label3.TabIndex = 10;
             // 
             // textMsg
             // 
             this.textMsg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textMsg.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textMsg.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.textMsg.Location = new System.Drawing.Point(75, 389);
+            this.textMsg.Location = new System.Drawing.Point(76, 391);
             this.textMsg.Name = "textMsg";
-            this.textMsg.Size = new System.Drawing.Size(273, 24);
+            this.textMsg.Size = new System.Drawing.Size(251, 20);
             this.textMsg.TabIndex = 9;
             // 
             // btnInput
@@ -76,12 +85,12 @@
             this.btnInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.btnInput.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInput.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInput.Font = new System.Drawing.Font("ONE 모바일POP", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInput.ForeColor = System.Drawing.Color.White;
-            this.btnInput.Location = new System.Drawing.Point(367, 384);
+            this.btnInput.Location = new System.Drawing.Point(349, 381);
             this.btnInput.Margin = new System.Windows.Forms.Padding(0);
             this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(95, 36);
+            this.btnInput.Size = new System.Drawing.Size(112, 41);
             this.btnInput.TabIndex = 11;
             this.btnInput.Text = "Send";
             this.btnInput.UseVisualStyleBackColor = false;
@@ -89,13 +98,14 @@
             // 
             // selectMsg
             // 
+            this.selectMsg.BackColor = System.Drawing.Color.White;
             this.selectMsg.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.selectMsg.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.selectMsg.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.selectMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.selectMsg.FormattingEnabled = true;
-            this.selectMsg.Location = new System.Drawing.Point(67, 385);
+            this.selectMsg.Location = new System.Drawing.Point(67, 386);
             this.selectMsg.Name = "selectMsg";
-            this.selectMsg.Size = new System.Drawing.Size(271, 33);
+            this.selectMsg.Size = new System.Drawing.Size(270, 28);
             this.selectMsg.TabIndex = 12;
             this.selectMsg.Visible = false;
             // 
@@ -103,12 +113,12 @@
             // 
             this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Font = new System.Drawing.Font("ONE 모바일POP", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(351, 384);
+            this.btnRemove.Location = new System.Drawing.Point(349, 381);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(0);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(111, 36);
+            this.btnRemove.Size = new System.Drawing.Size(112, 40);
             this.btnRemove.TabIndex = 13;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -129,7 +139,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(211)))));
-            this.label5.Font = new System.Drawing.Font("Arial Black", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("ONE 모바일POP", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
             this.label5.Location = new System.Drawing.Point(97, 25);
@@ -139,6 +149,21 @@
             this.label5.Text = "ChatChat";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -146,17 +171,20 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 505);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.textMsg);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.selectMsg);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnInput);
-            this.Controls.Add(this.textMsg);
-            this.Controls.Add(this.selectMsg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +200,10 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }

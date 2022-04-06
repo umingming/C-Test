@@ -46,7 +46,7 @@ namespace SocketClient
                 textContent.Text += msgList[msgList.Count - 1];
             }
 
-            if (msgList.Count >= 100)
+            if (msgList.Count >= 3)
             {
                 btnRemove.Enabled = true;
                 btnInput.Enabled = false;
@@ -54,7 +54,6 @@ namespace SocketClient
                 selectMsg.Visible = true;
                 textMsg.Visible = false;
                 btnInput.Visible = false;
-                label3.Visible = false;
             }
         }
 
@@ -72,7 +71,6 @@ namespace SocketClient
             selectMsg.Visible = false;
             textMsg.Visible = true;
             btnInput.Visible = true;
-            label3.Visible = true;
         }
 
         private void UpdateChat()
