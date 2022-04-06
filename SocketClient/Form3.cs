@@ -46,7 +46,7 @@ namespace SocketClient
                 textContent.Text += msgList[msgList.Count - 1];
             }
 
-            if (msgList.Count == 4)
+            if (msgList.Count >= 100)
             {
                 btnRemove.Enabled = true;
                 btnInput.Enabled = false;

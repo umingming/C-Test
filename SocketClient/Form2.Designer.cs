@@ -48,7 +48,7 @@
             // textName
             // 
             this.textName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textName.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textName.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.textName.Location = new System.Drawing.Point(305, 173);
             this.textName.Name = "textName";

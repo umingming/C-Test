@@ -44,18 +44,19 @@
             // 
             this.textContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(235)))));
             this.textContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textContent.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.textContent.Location = new System.Drawing.Point(3, 6);
+            this.textContent.Enabled = false;
+            this.textContent.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textContent.ForeColor = System.Drawing.Color.Black;
+            this.textContent.Location = new System.Drawing.Point(3, 8);
             this.textContent.Multiline = true;
             this.textContent.Name = "textContent";
-            this.textContent.Size = new System.Drawing.Size(393, 249);
+            this.textContent.Size = new System.Drawing.Size(393, 228);
             this.textContent.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(62, 431);
+            this.label3.Location = new System.Drawing.Point(67, 415);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 2);
             this.label3.TabIndex = 10;
@@ -63,9 +64,11 @@
             // textMsg
             // 
             this.textMsg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textMsg.Location = new System.Drawing.Point(70, 407);
+            this.textMsg.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
+            this.textMsg.Location = new System.Drawing.Point(75, 389);
             this.textMsg.Name = "textMsg";
-            this.textMsg.Size = new System.Drawing.Size(287, 21);
+            this.textMsg.Size = new System.Drawing.Size(273, 24);
             this.textMsg.TabIndex = 9;
             // 
             // btnInput
@@ -75,10 +78,10 @@
             this.btnInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInput.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInput.ForeColor = System.Drawing.Color.White;
-            this.btnInput.Location = new System.Drawing.Point(360, 397);
+            this.btnInput.Location = new System.Drawing.Point(367, 384);
             this.btnInput.Margin = new System.Windows.Forms.Padding(0);
             this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(100, 36);
+            this.btnInput.Size = new System.Drawing.Size(95, 36);
             this.btnInput.TabIndex = 11;
             this.btnInput.Text = "Send";
             this.btnInput.UseVisualStyleBackColor = false;
@@ -86,11 +89,13 @@
             // 
             // selectMsg
             // 
+            this.selectMsg.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.selectMsg.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.selectMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.selectMsg.FormattingEnabled = true;
-            this.selectMsg.Location = new System.Drawing.Point(62, 401);
+            this.selectMsg.Location = new System.Drawing.Point(67, 385);
             this.selectMsg.Name = "selectMsg";
-            this.selectMsg.Size = new System.Drawing.Size(291, 26);
+            this.selectMsg.Size = new System.Drawing.Size(271, 33);
             this.selectMsg.TabIndex = 12;
             this.selectMsg.Visible = false;
             // 
@@ -98,12 +103,12 @@
             // 
             this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(360, 397);
+            this.btnRemove.Location = new System.Drawing.Point(351, 384);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(0);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(100, 36);
+            this.btnRemove.Size = new System.Drawing.Size(111, 36);
             this.btnRemove.TabIndex = 13;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -114,9 +119,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(235)))));
             this.panel1.Controls.Add(this.textContent);
+            this.panel1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.panel1.Location = new System.Drawing.Point(64, 128);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(401, 258);
+            this.panel1.Size = new System.Drawing.Size(401, 239);
             this.panel1.TabIndex = 15;
             // 
             // label5
@@ -139,12 +146,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 505);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.selectMsg);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textMsg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnInput);
+            this.Controls.Add(this.textMsg);
+            this.Controls.Add(this.selectMsg);
             this.Name = "Form3";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Form3_Load);
