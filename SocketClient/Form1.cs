@@ -19,7 +19,6 @@ namespace SocketClient
         public Form1()
         {
             InitializeComponent();
-            label5.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -47,9 +47,9 @@
             this.btnStart.Font = new System.Drawing.Font("D2Coding", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.White;
             this.btnStart.Image = ((System.Drawing.Image)(resources.GetObject("btnStart.Image")));
-            this.btnStart.Location = new System.Drawing.Point(67, 219);
+            this.btnStart.Location = new System.Drawing.Point(171, 246);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(375, 93);
+            this.btnStart.Size = new System.Drawing.Size(153, 45);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start!";
             this.btnStart.UseVisualStyleBackColor = false;
