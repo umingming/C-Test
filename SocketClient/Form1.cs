@@ -28,14 +28,21 @@ namespace SocketClient
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            port = Convert.ToInt32(textPort.Text);
-            ip = textIp.Text;
+            try
+            {
+                port = Convert.ToInt32(textPort.Text);
+                ip = textIp.Text;
 
-            client = new TcpClient();
-            client.Connect(ip, port);
+                client = new TcpClient();
+                client.Connect(ip, port);
 
-            (new Form2(client)).Show();
-            this.Close();
+                (new Form2(client)).Show();
+                this.Close();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("올바른 Port 번호를 입력해주세요.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
