@@ -26,10 +26,10 @@ namespace SocketClient
 
         private void SendMsg(object sender, EventArgs e)
         {
-            if (!(msg = textMsg.Text).Equals(""))
+            if (!(msg = txtMsg.Text).Equals(""))
             {
                 Communicate();
-                textMsg.Text = "";
+                txtMsg.Text = "";
             }
             else
             {
@@ -57,21 +57,21 @@ namespace SocketClient
         private void AddMsg()
         {
             msgList.Add(echo);
-            selectMsg.Items.Add(echo);
-            textContent.Text += echo;
+            cmbMsg.Items.Add(echo);
+            txtChat.Text += echo;
 
             if (msgList.Count > maxMsg)
             {
                 btnRemove.Visible = true;
-                selectMsg.Visible = true;
+                cmbMsg.Visible = true;
                 btnInput.Visible = false;
-                textMsg.Visible = false;
+                txtMsg.Visible = false;
             }
         }
 
         private void RemoveMsg(object sender, EventArgs e)
         {
-            index = (int)selectMsg.SelectedIndex;
+            index = (int)cmbMsg.SelectedIndex;
 
             if(index > -1)
             {
@@ -79,9 +79,9 @@ namespace SocketClient
                 UpdateChat();
 
                 btnRemove.Visible = false;
-                selectMsg.Visible = false;
+                cmbMsg.Visible = false;
                 btnInput.Visible = true;
-                textMsg.Visible = true;
+                txtMsg.Visible = true;
             }
             else
             {
@@ -93,16 +93,16 @@ namespace SocketClient
         private void RemoveAtMsg()
         {
             msgList.RemoveAt(index);
-            selectMsg.Items.RemoveAt(index);
+            cmbMsg.Items.RemoveAt(index);
         }
 
         private void UpdateChat()
         {
-            textContent.Text = "";
+            txtChat.Text = "";
 
             for (int i = 0; i < msgList.Count; i++)
             {
-                textContent.Text += msgList[i];
+                txtChat.Text += msgList[i];
             }
         }
 

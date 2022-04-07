@@ -20,8 +20,8 @@ namespace SocketClient
         {
             try
             {
-                port = Convert.ToInt32(textPort.Text);
-                ip = textIp.Text;
+                port = Convert.ToInt32(txtPort.Text);
+                ip = txtIp.Text;
 
                 client = new TcpClient();
                 client.Connect(ip, port);

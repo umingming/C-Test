@@ -32,8 +32,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textPort = new System.Windows.Forms.TextBox();
-            this.textIp = new System.Windows.Forms.TextBox();
+            this.txtPort = new System.Windows.Forms.TextBox();
+            this.txtIp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,25 +75,25 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "IP :";
             // 
-            // textPort
+            // txtPort
             // 
-            this.textPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textPort.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.textPort.Location = new System.Drawing.Point(138, 178);
-            this.textPort.Name = "textPort";
-            this.textPort.Size = new System.Drawing.Size(104, 25);
-            this.textPort.TabIndex = 3;
+            this.txtPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPort.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
+            this.txtPort.Location = new System.Drawing.Point(138, 178);
+            this.txtPort.Name = "txtPort";
+            this.txtPort.Size = new System.Drawing.Size(104, 25);
+            this.txtPort.TabIndex = 3;
             // 
-            // textIp
+            // txtIp
             // 
-            this.textIp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textIp.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textIp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.textIp.Location = new System.Drawing.Point(327, 178);
-            this.textIp.Name = "textIp";
-            this.textIp.Size = new System.Drawing.Size(151, 25);
-            this.textIp.TabIndex = 4;
+            this.txtIp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIp.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
+            this.txtIp.Location = new System.Drawing.Point(327, 178);
+            this.txtIp.Name = "txtIp";
+            this.txtIp.Size = new System.Drawing.Size(151, 25);
+            this.txtIp.TabIndex = 4;
             // 
             // label3
             // 
@@ -135,8 +135,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textIp);
-            this.Controls.Add(this.textPort);
+            this.Controls.Add(this.txtIp);
+            this.Controls.Add(this.txtPort);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStart);
@@ -155,8 +155,8 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textPort;
-        private System.Windows.Forms.TextBox textIp;
+        private System.Windows.Forms.TextBox txtPort;
+        private System.Windows.Forms.TextBox txtIp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

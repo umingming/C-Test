@@ -18,7 +18,7 @@ namespace SocketClient
 
         private void EnterName(object sender, EventArgs e)
         {
-            if(!(name = textName.Text).Equals(""))
+            if(!(name = txtName.Text).Equals(""))
             {
                 byte[] byteData = new byte[name.Length];
                 byteData = Encoding.UTF8.GetBytes(name + "\n");
