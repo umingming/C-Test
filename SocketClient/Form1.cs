@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Net.Sockets;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SocketClient
@@ -21,12 +16,7 @@ namespace SocketClient
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnStart_Click(object sender, EventArgs e)
+        private void Start(object sender, EventArgs e)
         {
             try
             {
@@ -39,9 +29,15 @@ namespace SocketClient
                 (new Form2(client)).Show();
                 this.Close();
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
-                MessageBox.Show("올바른 Port 번호를 입력해주세요.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("올바른 Port 번호를 입력해주세요.", ""
+                                , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch(SocketException)
+            {
+                MessageBox.Show("Port 번호, 또는 IP 주소를 확인해주세요.", ""
+                                , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

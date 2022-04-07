@@ -51,10 +51,10 @@
             this.textName.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.textName.Location = new System.Drawing.Point(312, 180);
+            this.textName.MaxLength = 5;
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(154, 25);
+            this.textName.Size = new System.Drawing.Size(105, 25);
             this.textName.TabIndex = 7;
-            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // label1
             // 
@@ -66,7 +66,6 @@
             this.label1.Size = new System.Drawing.Size(229, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "What\'s your name?";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnEnter
             // 
@@ -80,7 +79,6 @@
             this.btnEnter.TabIndex = 9;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = false;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // label5
             // 
@@ -108,7 +106,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.ShowIcon = false;
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

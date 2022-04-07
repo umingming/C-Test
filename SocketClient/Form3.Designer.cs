@@ -75,9 +75,10 @@
             this.textMsg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textMsg.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.textMsg.Location = new System.Drawing.Point(76, 391);
+            this.textMsg.Location = new System.Drawing.Point(71, 391);
+            this.textMsg.MaxLength = 19;
             this.textMsg.Name = "textMsg";
-            this.textMsg.Size = new System.Drawing.Size(251, 20);
+            this.textMsg.Size = new System.Drawing.Size(261, 20);
             this.textMsg.TabIndex = 9;
             this.textMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
@@ -95,7 +96,7 @@
             this.btnInput.TabIndex = 11;
             this.btnInput.Text = "Send";
             this.btnInput.UseVisualStyleBackColor = false;
-            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
+            this.btnInput.Click += new System.EventHandler(this.SendMsg);
             // 
             // selectMsg
             // 
@@ -124,7 +125,7 @@
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Visible = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnRemove.Click += new System.EventHandler(this.RemoveMsg);
             // 
             // panel1
             // 
@@ -173,15 +174,14 @@
             this.ClientSize = new System.Drawing.Size(520, 505);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.selectMsg);
             this.Controls.Add(this.textMsg);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.selectMsg);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnInput);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.ShowIcon = false;
-            this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();

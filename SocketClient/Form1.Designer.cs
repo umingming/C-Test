@@ -51,7 +51,7 @@
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start!";
             this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnStart.Click += new System.EventHandler(this.Start);
             // 
             // label1
             // 
@@ -145,7 +145,6 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
