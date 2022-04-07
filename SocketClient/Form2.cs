@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace SocketClient
 {
-    public partial class Form2 : Form
+    public partial class NameForm : Form
     {
         TcpClient client;
         String name;
 
-        public Form2(TcpClient client)
+        public NameForm(TcpClient client)
         {
             this.client = client;
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace SocketClient
                 byteData = Encoding.UTF8.GetBytes(name + "\n");
                 client.GetStream().Write(byteData, 0, byteData.Length);
 
-                Form3 chatForm = new Form3(client);
+                ChatForm chatForm = new ChatForm(client);
                 chatForm.Show();
                 this.Close();
             }

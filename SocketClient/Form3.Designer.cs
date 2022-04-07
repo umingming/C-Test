@@ -1,6 +1,6 @@
 ﻿namespace SocketClient
 {
-    partial class Form3
+    partial class ChatForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatForm));
             this.txtChat = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMsg = new System.Windows.Forms.TextBox();
@@ -166,7 +166,7 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // Form3
+            // ChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +180,7 @@
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.cmbMsg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form3";
+            this.Name = "ChatForm";
             this.ShowIcon = false;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

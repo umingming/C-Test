@@ -26,7 +26,7 @@ namespace SocketClient
                 client = new TcpClient();
                 client.Connect(ip, port);
 
-                (new Form2(client)).Show();
+                (new NameForm(client)).Show();
                 this.Close();
             }
             catch (FormatException)

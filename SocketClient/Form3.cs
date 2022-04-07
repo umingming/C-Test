@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace SocketClient
 {
-    public partial class Form3 : Form
+    public partial class ChatForm : Form
     {
         TcpClient client;
         ArrayList msgList;
@@ -16,7 +16,7 @@ namespace SocketClient
         int index;
         int maxMsg;
 
-        public Form3(TcpClient client)
+        public ChatForm(TcpClient client)
         {
             this.client = client;
             this.msgList = new ArrayList(100);

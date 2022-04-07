@@ -1,6 +1,6 @@
 ﻿namespace SocketClient
 {
-    partial class Form2
+    partial class NameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NameForm));
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             this.label5.Text = "ChatChat";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form2
+            // NameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "NameForm";
             this.ShowIcon = false;
             this.ResumeLayout(false);
             this.PerformLayout();
