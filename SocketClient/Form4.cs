@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace SocketClient
 {
-    public partial class Form4 : SocketClient.Form1
+    public partial class Form4 : SocketClient.MainForm
     {
         public Form4()
         {

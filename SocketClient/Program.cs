@@ -14,7 +14,7 @@ namespace SocketClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            new Form1().Show(); 
+            new MainForm().Show(); 
             Application.Run();
         }
     }

@@ -4,14 +4,14 @@ using System.Windows.Forms;
 
 namespace SocketClient
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         TcpClient client;
 
         int port;
         String ip;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
