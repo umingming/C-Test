@@ -1,12 +1,11 @@
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\bin\Debug\SocketClient.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\bin\Debug\SocketClient.pdb
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.csproj.AssemblyReference.cache
-C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.Form1.resources
-C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.Form2.resources
-C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.Form3.resources
-C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.Form4.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.MainForm.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.NameForm.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.ChatForm.resources
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.Properties.Resources.resources
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.csproj.GenerateResource.cache
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.exe
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.pdb
-C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\bin\Debug\SocketClient.pdb

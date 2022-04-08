@@ -55,17 +55,19 @@
             this.txtChat.Enabled = false;
             this.txtChat.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtChat.ForeColor = System.Drawing.Color.Black;
-            this.txtChat.Location = new System.Drawing.Point(12, 12);
+            this.txtChat.Location = new System.Drawing.Point(9, 12);
             this.txtChat.Multiline = true;
             this.txtChat.Name = "txtChat";
-            this.txtChat.Size = new System.Drawing.Size(385, 221);
+            this.txtChat.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtChat.ShortcutsEnabled = false;
+            this.txtChat.Size = new System.Drawing.Size(382, 216);
             this.txtChat.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(67, 386);
+            this.label3.Location = new System.Drawing.Point(69, 386);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(270, 29);
             this.label3.TabIndex = 10;
@@ -75,10 +77,10 @@
             this.txtMsg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMsg.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.txtMsg.Location = new System.Drawing.Point(71, 391);
+            this.txtMsg.Location = new System.Drawing.Point(73, 391);
             this.txtMsg.MaxLength = 19;
             this.txtMsg.Name = "txtMsg";
-            this.txtMsg.Size = new System.Drawing.Size(261, 20);
+            this.txtMsg.Size = new System.Drawing.Size(261, 14);
             this.txtMsg.TabIndex = 9;
             this.txtMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
@@ -89,7 +91,7 @@
             this.btnInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInput.Font = new System.Drawing.Font("ONE 모바일POP", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInput.ForeColor = System.Drawing.Color.White;
-            this.btnInput.Location = new System.Drawing.Point(349, 381);
+            this.btnInput.Location = new System.Drawing.Point(351, 381);
             this.btnInput.Margin = new System.Windows.Forms.Padding(0);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(112, 41);
@@ -105,9 +107,9 @@
             this.cmbMsg.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmbMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.cmbMsg.FormattingEnabled = true;
-            this.cmbMsg.Location = new System.Drawing.Point(67, 386);
+            this.cmbMsg.Location = new System.Drawing.Point(69, 386);
             this.cmbMsg.Name = "cmbMsg";
-            this.cmbMsg.Size = new System.Drawing.Size(270, 28);
+            this.cmbMsg.Size = new System.Drawing.Size(270, 21);
             this.cmbMsg.TabIndex = 12;
             this.cmbMsg.Visible = false;
             // 
@@ -117,7 +119,7 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("ONE 모바일POP", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(349, 381);
+            this.btnRemove.Location = new System.Drawing.Point(351, 381);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(0);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(112, 40);
@@ -175,10 +177,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtMsg);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.cmbMsg);
+            this.Controls.Add(this.label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChatForm";
             this.ShowIcon = false;
