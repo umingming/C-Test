@@ -32,8 +32,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPort = new System.Windows.Forms.TextBox();
             this.txtIp = new System.Windows.Forms.TextBox();
+            this.txtPort = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("ONE 모바일고딕 Title", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(66, 178);
+            this.label1.Location = new System.Drawing.Point(272, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 25);
             this.label1.TabIndex = 1;
@@ -69,37 +69,37 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("ONE 모바일고딕 Title", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(275, 178);
+            this.label2.Location = new System.Drawing.Point(61, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "IP :";
             // 
-            // txtPort
-            // 
-            this.txtPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPort.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.txtPort.Location = new System.Drawing.Point(138, 178);
-            this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(104, 25);
-            this.txtPort.TabIndex = 3;
-            // 
             // txtIp
             // 
             this.txtIp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIp.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIp.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtIp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.txtIp.Location = new System.Drawing.Point(327, 178);
+            this.txtIp.Location = new System.Drawing.Point(108, 182);
             this.txtIp.Name = "txtIp";
-            this.txtIp.Size = new System.Drawing.Size(151, 25);
-            this.txtIp.TabIndex = 4;
+            this.txtIp.Size = new System.Drawing.Size(129, 25);
+            this.txtIp.TabIndex = 3;
+            // 
+            // txtPort
+            // 
+            this.txtPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPort.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
+            this.txtPort.Location = new System.Drawing.Point(344, 182);
+            this.txtPort.Name = "txtPort";
+            this.txtPort.Size = new System.Drawing.Size(108, 25);
+            this.txtPort.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(132, 204);
+            this.label3.Location = new System.Drawing.Point(342, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 2);
             this.label3.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(321, 204);
+            this.label4.Location = new System.Drawing.Point(105, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 2);
             this.label4.TabIndex = 6;
@@ -135,8 +135,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtIp);
             this.Controls.Add(this.txtPort);
+            this.Controls.Add(this.txtIp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStart);
@@ -155,8 +155,8 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.TextBox txtIp;
+        private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

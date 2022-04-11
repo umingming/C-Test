@@ -33,8 +33,8 @@ namespace SocketClient
         {
             try
             {
-                port = Convert.ToInt32(txtPort.Text);
-                ip = txtIp.Text;
+                port = Convert.ToInt32(txtIp.Text);
+                ip = txtPort.Text;
 
                 client = new TcpClient();
                 client.Connect(ip, port);
