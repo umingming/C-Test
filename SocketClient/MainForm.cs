@@ -78,5 +78,14 @@ namespace SocketClient
 
             Start(sender, e);
         }
+
+        /*
+            Quit
+            1. 어플리케이션을 종료함.
+         */
+        private void Quit(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

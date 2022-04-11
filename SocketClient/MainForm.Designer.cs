@@ -149,7 +149,7 @@
             this.MinimumSize = new System.Drawing.Size(542, 561);
             this.Name = "MainForm";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Quit);
             this.ResumeLayout(false);
             this.PerformLayout();
 
