@@ -46,6 +46,7 @@ namespace SocketClient
             }
             else
             {
+                AddMsg(txtMsg.Text + "\n");
                 Communicate(txtMsg.Text);
                 txtMsg.Text = "";
             }
@@ -72,7 +73,7 @@ namespace SocketClient
 
             if (echo != null)
             {
-                AddMsg();
+                AddMsg(echo);
             }
         }
 
@@ -82,10 +83,10 @@ namespace SocketClient
             2. if msgList의 크기가 최대 값을 초과하는지?
                 > 입력을 막고 삭제를 보이게 함.
          */
-        private void AddMsg()
+        private void AddMsg(String msg)
         {
-            msgList.Add(echo);
-            rtxChat.Text += echo;
+            msgList.Add(msg);
+            rtxChat.Text += msg;
 
             if (msgList.Count > max)
             {
