@@ -58,5 +58,18 @@ namespace SocketClient
                                 , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        /*
+            IsEnterKey
+            1. if문 입력 키가 엔터가 아닌지?
+                > return
+            2. Start 호출
+         */
+        private void IsEnterKey(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+
+            Start(sender, e);
+        }
     }
 }

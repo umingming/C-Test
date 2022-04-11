@@ -94,6 +94,7 @@
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(108, 25);
             this.txtPort.TabIndex = 4;
+            this.txtPort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
             // label3
             // 
@@ -142,6 +143,8 @@
             this.Controls.Add(this.btnStart);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(542, 561);
+            this.MinimumSize = new System.Drawing.Size(542, 561);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
