@@ -58,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("ONE 모바일고딕 Title", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(272, 182);
+            this.label1.Location = new System.Drawing.Point(282, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 25);
             this.label1.TabIndex = 1;
@@ -81,8 +81,9 @@
             this.txtIp.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtIp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.txtIp.Location = new System.Drawing.Point(108, 182);
+            this.txtIp.MaxLength = 15;
             this.txtIp.Name = "txtIp";
-            this.txtIp.Size = new System.Drawing.Size(129, 25);
+            this.txtIp.Size = new System.Drawing.Size(118, 25);
             this.txtIp.TabIndex = 3;
             // 
             // txtPort
@@ -90,9 +91,10 @@
             this.txtPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPort.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.txtPort.Location = new System.Drawing.Point(344, 182);
+            this.txtPort.Location = new System.Drawing.Point(355, 182);
+            this.txtPort.MaxLength = 6;
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(108, 25);
+            this.txtPort.Size = new System.Drawing.Size(99, 25);
             this.txtPort.TabIndex = 4;
             this.txtPort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
@@ -100,9 +102,9 @@
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(342, 208);
+            this.label3.Location = new System.Drawing.Point(352, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 2);
+            this.label3.Size = new System.Drawing.Size(102, 2);
             this.label3.TabIndex = 5;
             // 
             // label4
@@ -111,7 +113,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(105, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 2);
+            this.label4.Size = new System.Drawing.Size(131, 2);
             this.label4.TabIndex = 6;
             // 
             // label5

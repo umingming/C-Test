@@ -10,11 +10,6 @@ namespace SocketClient
      */
     public partial class MainForm : Form
     {
-        TcpClient client;
-
-        int port;
-        String ip;
-
         public MainForm()
         {
             InitializeComponent();
@@ -33,30 +28,42 @@ namespace SocketClient
         {
             try
             {
-                port = Convert.ToInt32(txtIp.Text);
-                ip = txtPort.Text;
+                int port = Convert.ToInt32(txtPort.Text);
+                String ip = txtIp.Text;
 
-                client = new TcpClient();
-                client.Connect(ip, port);
-
-                (new NameForm(client)).Show();
-                this.Close();
+                if(port > 0 && port < 65536)
+                {
+                    TcpClient client = new TcpClient();
+                    client.Connect(ip, port);
+                    (new NameForm(client)).Show();
+                    this.Close();
+                }
+                else
+                {
+                    throw new FormatException();
+                }
             }
             catch (FormatException)
             {
-                MessageBox.Show("올바른 Port 번호를 입력해주세요.", ""
-                                , MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show("올바른 IP 주소를 입력해주세요.", ""
-                                , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DisplayError("올바른 Port 번호를 입력해주세요.");
             }
             catch (SocketException)
             {
-                MessageBox.Show("불가능한 Port 번호입니다.", ""
-                                , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DisplayError("접속 정보를 확인해주세요.");
             }
+            catch (Exception)
+            {
+                DisplayError("알 수 없는 오류입니다.");
+            }
+        }
+
+        /*
+            DisplayError
+            1. 에러의 내용을 메시지 박스로 안내함.
+         */
+        private void DisplayError(string text)
+        {
+            MessageBox.Show(text, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /*
