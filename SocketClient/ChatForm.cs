@@ -15,16 +15,13 @@ namespace SocketClient
         TcpClient client;
         ArrayList msgList;
 
-        String msg;
         String echo;
-        int index;
-        int maxMsg;
+        int max;
 
         public ChatForm(TcpClient client)
         {
             this.client = client;
-            this.msgList = new ArrayList(100);
-            this.maxMsg = 100;
+            this.msgList = new ArrayList(200);
             InitializeComponent();
         }
 
@@ -37,15 +34,20 @@ namespace SocketClient
          */
         private void SendMsg(object sender, EventArgs e)
         {
-            if (!(msg = txtMsg.Text).Equals(""))
+            if (max == 0)
             {
-                Communicate();
-                txtMsg.Text = "";
+                MessageBox.Show("최대 메시지 갯수를 정해주세요.", ""
+                                , MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
+            else if ((txtMsg.Text).Equals(""))
             {
                 MessageBox.Show("메시지를 입력해주세요.", ""
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Communicate(txtMsg.Text);
+                txtMsg.Text = "";
             }
         }
 
@@ -58,7 +60,7 @@ namespace SocketClient
             5. if문 echo가 null이 아닌지?
                 > AddMsg 호출
          */
-        private void Communicate()
+        private void Communicate(String msg)
         {
             byte[] msgData = new byte[msg.Length];
             msgData = Encoding.UTF8.GetBytes(msg + "\n");
@@ -83,55 +85,12 @@ namespace SocketClient
         private void AddMsg()
         {
             msgList.Add(echo);
-            cmbMsg.Items.Add(echo);
-            txtChat.Text += echo;
+            rtxChat.Text += echo;
 
-            if (msgList.Count > maxMsg)
+            if (msgList.Count > max)
             {
-                btnRemove.Visible = true;
-                cmbMsg.Visible = true;
-                btnInput.Visible = false;
-                txtMsg.Visible = false;
-            }
-        }
-
-        /*
-            RemoveMsg
-            1. 콤보 박스에 선택된 index를 변수에 초기화
-            2. if문 index가 유효한지?
-                > RemoveMsg와 UpdateChat 호출
-                > 입력을 열고, 삭제를 닫기
-            3. 메시지를 잘못 선택한 경우 안내
-         */
-        private void RemoveMsg(object sender, EventArgs e)
-        {
-            index = (int)cmbMsg.SelectedIndex;
-
-            if(index > -1)
-            {
-                RemoveAtMsg();
                 UpdateChat();
-
-                btnRemove.Visible = false;
-                cmbMsg.Visible = false;
-                btnInput.Visible = true;
-                txtMsg.Visible = true;
             }
-            else
-            {
-                MessageBox.Show("삭제할 메시지를 확인해주세요.", ""
-                                , MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        /*
-            RemoveAtMsg
-            1. 특정 인덱스의 메시지를 지움.
-         */
-        private void RemoveAtMsg()
-        {
-            msgList.RemoveAt(index);
-            cmbMsg.Items.RemoveAt(index);
         }
 
         /*
@@ -139,15 +98,25 @@ namespace SocketClient
             1. 대화 박스 초기화
             2. for문 ArrayList의 크기 반복
                 > 대화 내용에 해당 요소 추가
-         */ 
+         */
         private void UpdateChat()
         {
-            txtChat.Text = "";
+            msgList.RemoveAt(0);
+            rtxChat.Text = "";
 
             for (int i = 0; i < msgList.Count; i++)
             {
-                txtChat.Text += msgList[i];
+                rtxChat.Text += msgList[i];
             }
+        }
+
+        /*
+            SetMax; 콤보박스의 선택 값에 따라 메시지 보관 갯수를 설정함.
+            1. 콤보 박스 값을 int로 변환해 max 변수에 초기화함.
+         */
+        private void SetMax(object sender, EventArgs e)
+        {
+            max = Convert.ToInt32(cmbMax.SelectedItem);
         }
 
         /*
@@ -157,11 +126,18 @@ namespace SocketClient
          */
         private void IsEnterKey(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
-            {
-                SendMsg(sender, e);
-            }
-            
+            if (e.KeyCode != Keys.Enter) return;
+
+            SendMsg(sender, e);
+        }
+
+        /*
+            Quit
+            1. 어플리케이션을 종료함.
+         */
+        private void Quit(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
