@@ -86,22 +86,26 @@
             // 
             // cmbMax
             // 
+            this.cmbMax.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbMax.BackColor = System.Drawing.Color.White;
             this.cmbMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMax.Font = new System.Drawing.Font("ONE 모바일POP", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmbMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.cmbMax.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.cmbMax, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.cmbMax.Items.AddRange(new object[] {
-            "4",
-            "50",
             "100",
             "150",
-            "200"});
-            this.cmbMax.Location = new System.Drawing.Point(385, 107);
+            "200",
+            "4",
+            "50"});
+            this.cmbMax.Location = new System.Drawing.Point(390, 107);
             this.cmbMax.Name = "cmbMax";
-            this.cmbMax.Size = new System.Drawing.Size(80, 30);
+            this.cmbMax.Size = new System.Drawing.Size(75, 30);
             this.cmbMax.TabIndex = 12;
-            this.cmbMax.Text = "MAX";
+            this.cmbMax.Text = "Max";
             this.cmbMax.SelectedIndexChanged += new System.EventHandler(this.SetMax);
             // 
             // panel1
