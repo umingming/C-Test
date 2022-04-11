@@ -33,10 +33,7 @@ namespace SocketClient
 
                 if(port > 0 && port < 65536)
                 {
-                    TcpClient client = new TcpClient();
-                    client.Connect(ip, port);
-                    (new NameForm(client)).Show();
-                    this.Close();
+                    Connect(ip, port);
                 }
                 else
                 {
@@ -55,6 +52,19 @@ namespace SocketClient
             {
                 DisplayError("알 수 없는 오류입니다.");
             }
+        }
+
+        /*
+            Connect 메소드; 서버에 접속
+            1. IP, Port를 매개로 서버에 연결.
+            2. client를 인자로 NameForm 열고, 해당 폼은 닫기
+         */
+        private void Connect(string ip, int port)
+        {
+            TcpClient client = new TcpClient();
+            client.Connect(ip, port);
+            (new NameForm(client)).Show();
+            this.Visible = false;
         }
 
         /*

@@ -12,7 +12,6 @@ namespace SocketClient
     public partial class NameForm : Form
     {
         TcpClient client;
-        String name;
 
         public NameForm(TcpClient client)
         {
@@ -31,20 +30,43 @@ namespace SocketClient
          */
         private void EnterName(object sender, EventArgs e)
         {
-            if(!(name = txtName.Text).Equals(""))
+            if(!txtName.Text.Equals(""))
             {
+                String name = txtName.Text;
                 byte[] nameData = new byte[name.Length];
                 nameData = Encoding.UTF8.GetBytes(name + "\n");
                 client.GetStream().Write(nameData, 0, nameData.Length);
 
                 (new ChatForm(client)).Show();
-                this.Close();
+                this.Visible = false;
             }
             else
             {
                 MessageBox.Show("이름을 입력해주세요.", ""
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        /*
+            IsEnterKey
+            1. if문 입력 키가 엔터가 아닌지?
+                > return
+            2. Start 호출
+         */
+        private void IsEnterKey(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode != Keys.Enter) return;
+
+            EnterName(sender, e);
+        }
+
+        /*
+            Quit
+            1. 어플리케이션을 종료함.
+         */
+        private void Quit(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
