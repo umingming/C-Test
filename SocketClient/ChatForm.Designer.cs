@@ -96,11 +96,12 @@
             this.cmbMax.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.cmbMax, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.cmbMax.Items.AddRange(new object[] {
+            "4",
+            "10",
+            "50",
             "100",
             "150",
-            "200",
-            "4",
-            "50"});
+            "200"});
             this.cmbMax.Location = new System.Drawing.Point(390, 107);
             this.cmbMax.Name = "cmbMax";
             this.cmbMax.Size = new System.Drawing.Size(75, 30);
@@ -128,6 +129,7 @@
             this.rtxChat.Location = new System.Drawing.Point(10, 10);
             this.rtxChat.Margin = new System.Windows.Forms.Padding(10);
             this.rtxChat.Name = "rtxChat";
+            this.rtxChat.ReadOnly = true;
             this.rtxChat.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
             this.rtxChat.Size = new System.Drawing.Size(391, 219);
             this.rtxChat.TabIndex = 17;

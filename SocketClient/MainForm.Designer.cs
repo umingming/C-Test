@@ -48,7 +48,7 @@
             this.btnStart.Location = new System.Drawing.Point(110, 276);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(295, 56);
-            this.btnStart.TabIndex = 0;
+            this.btnStart.TabIndex = 3;
             this.btnStart.Text = "Start!";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.Start);
@@ -84,7 +84,7 @@
             this.txtIp.MaxLength = 15;
             this.txtIp.Name = "txtIp";
             this.txtIp.Size = new System.Drawing.Size(118, 25);
-            this.txtIp.TabIndex = 3;
+            this.txtIp.TabIndex = 1;
             // 
             // txtPort
             // 
@@ -95,7 +95,7 @@
             this.txtPort.MaxLength = 6;
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(99, 25);
-            this.txtPort.TabIndex = 4;
+            this.txtPort.TabIndex = 2;
             this.txtPort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
             // label3
@@ -145,7 +145,9 @@
             this.Controls.Add(this.btnStart);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(542, 561);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(542, 561);
             this.Name = "MainForm";
             this.ShowIcon = false;
