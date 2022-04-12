@@ -54,7 +54,7 @@
             this.txtName.MaxLength = 5;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(105, 25);
-            this.txtName.TabIndex = 7;
+            this.txtName.TabIndex = 1;
             this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
             // label1
@@ -77,7 +77,7 @@
             this.btnEnter.Location = new System.Drawing.Point(110, 276);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(295, 56);
-            this.btnEnter.TabIndex = 9;
+            this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = false;
             this.btnEnter.Click += new System.EventHandler(this.EnterName);
@@ -106,6 +106,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(542, 561);
             this.MinimumSize = new System.Drawing.Size(542, 561);
             this.Name = "NameForm";

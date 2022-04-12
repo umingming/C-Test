@@ -65,7 +65,7 @@
             this.txtMsg.MaxLength = 19;
             this.txtMsg.Name = "txtMsg";
             this.txtMsg.Size = new System.Drawing.Size(261, 20);
-            this.txtMsg.TabIndex = 9;
+            this.txtMsg.TabIndex = 2;
             this.txtMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
             // btnInput
@@ -79,7 +79,7 @@
             this.btnInput.Margin = new System.Windows.Forms.Padding(0);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(112, 41);
-            this.btnInput.TabIndex = 11;
+            this.btnInput.TabIndex = 3;
             this.btnInput.Text = "Send";
             this.btnInput.UseVisualStyleBackColor = false;
             this.btnInput.Click += new System.EventHandler(this.SendMsg);
@@ -105,7 +105,7 @@
             this.cmbMax.Location = new System.Drawing.Point(390, 107);
             this.cmbMax.Name = "cmbMax";
             this.cmbMax.Size = new System.Drawing.Size(75, 30);
-            this.cmbMax.TabIndex = 12;
+            this.cmbMax.TabIndex = 1;
             this.cmbMax.Text = "Max";
             this.cmbMax.SelectedIndexChanged += new System.EventHandler(this.SetMax);
             // 
@@ -176,6 +176,7 @@
             this.Controls.Add(this.txtMsg);
             this.Controls.Add(this.label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(542, 561);
             this.MinimumSize = new System.Drawing.Size(542, 561);
             this.Name = "ChatForm";
