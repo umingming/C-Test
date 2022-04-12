@@ -39,6 +39,7 @@ namespace SocketClient
                 MessageBox.Show("최대 메시지 갯수를 정해주세요.", ""
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbMax.Select();
+                cmbMax.DroppedDown = true;
             }
             else if ((txtMsg.Text).Equals(""))
             {
@@ -91,10 +92,7 @@ namespace SocketClient
             rtxChat.SelectionStart = rtxChat.Text.Length;
             rtxChat.ScrollToCaret();
 
-            if (msgList.Count > max)
-            {
-                UpdateChat();
-            }
+            UpdateChat();
         }
 
         /*
@@ -105,13 +103,16 @@ namespace SocketClient
          */
         private void UpdateChat()
         {
-            msgList.RemoveAt(0);
+            if (msgList.Count <= max) return;
+
+            msgList.RemoveRange(0, msgList.Count - max);
             rtxChat.Text = "";
 
             for (int i = 0; i < msgList.Count; i++)
             {
                 rtxChat.Text += msgList[i];
             }
+
             rtxChat.SelectionStart = rtxChat.Text.Length;
             rtxChat.ScrollToCaret();
         }
@@ -123,6 +124,7 @@ namespace SocketClient
         private void SetMax(object sender, EventArgs e)
         {
             max = Convert.ToInt32(cmbMax.SelectedItem);
+            UpdateChat();
             txtMsg.Select();
         }
 
@@ -134,7 +136,6 @@ namespace SocketClient
         private void IsEnterKey(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
-
             SendMsg(sender, e);
         }
 
@@ -153,7 +154,7 @@ namespace SocketClient
          */
         private void BlockInput(object sender, KeyEventArgs e)
         {
-            e.SuppressKeyPress = true;
+ //           e.SuppressKeyPress = true;
         }
     }
 }

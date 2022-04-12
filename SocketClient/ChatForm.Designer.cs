@@ -87,6 +87,7 @@
             // 
             // cmbMax
             // 
+            this.cmbMax.AllowDrop = true;
             this.cmbMax.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -96,6 +97,7 @@
             this.cmbMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(214)))), ((int)(((byte)(160)))));
             this.cmbMax.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.cmbMax, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.cmbMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cmbMax.Items.AddRange(new object[] {
             "4",
             "10",
