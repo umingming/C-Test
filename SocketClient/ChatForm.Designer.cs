@@ -105,13 +105,12 @@
             "100",
             "150",
             "200"});
-            this.cmbMax.Location = new System.Drawing.Point(390, 107);
+            this.cmbMax.Location = new System.Drawing.Point(394, 107);
             this.cmbMax.Name = "cmbMax";
-            this.cmbMax.Size = new System.Drawing.Size(75, 30);
+            this.cmbMax.Size = new System.Drawing.Size(71, 30);
             this.cmbMax.TabIndex = 3;
             this.cmbMax.Text = "Max";
-            this.cmbMax.SelectedIndexChanged += new System.EventHandler(this.SetMax);
-            this.cmbMax.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BlockInput);
+            this.cmbMax.DropDownClosed += new System.EventHandler(this.SetMax);
             // 
             // panel1
             // 

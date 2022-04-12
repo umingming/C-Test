@@ -28,8 +28,8 @@ namespace SocketClient
         {
             try
             {
-                int port = Convert.ToInt32(txtPort.Text);
                 String ip = txtIp.Text;
+                int port = Convert.ToInt32(txtPort.Text);
 
                 if(port > 0 && port < 65536)
                 {

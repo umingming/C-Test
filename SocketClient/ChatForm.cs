@@ -124,6 +124,7 @@ namespace SocketClient
         private void SetMax(object sender, EventArgs e)
         {
             max = Convert.ToInt32(cmbMax.SelectedItem);
+
             UpdateChat();
             txtMsg.Select();
         }
@@ -137,6 +138,18 @@ namespace SocketClient
         {
             if (e.KeyCode != Keys.Enter) return;
             SendMsg(sender, e);
+        }
+
+        /*
+            IsEnterKey
+            1. if문 입력 키가 엔터인지?
+                > SendMsg 호출
+         */
+        private void IsEnterKey(ComboBox sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            UpdateChat();
+            txtMsg.Select();
         }
 
         /*

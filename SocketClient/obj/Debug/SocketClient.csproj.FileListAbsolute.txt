@@ -9,3 +9,4 @@ C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketCl
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.exe
 C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.pdb
+C:\Users\user\source\repos\umingming\C-sharpTest\SocketClient\obj\Debug\SocketClient.Form1.resources
