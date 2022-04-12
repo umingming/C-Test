@@ -59,13 +59,14 @@
             // txtMsg
             // 
             this.txtMsg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMsg.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMsg.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.txtMsg.Location = new System.Drawing.Point(73, 406);
-            this.txtMsg.MaxLength = 19;
+            this.txtMsg.Location = new System.Drawing.Point(74, 406);
+            this.txtMsg.MaxLength = 200;
             this.txtMsg.Name = "txtMsg";
-            this.txtMsg.Size = new System.Drawing.Size(261, 20);
-            this.txtMsg.TabIndex = 2;
+            this.txtMsg.Size = new System.Drawing.Size(260, 20);
+            this.txtMsg.TabIndex = 1;
             this.txtMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
             // 
             // btnInput
@@ -79,7 +80,7 @@
             this.btnInput.Margin = new System.Windows.Forms.Padding(0);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(112, 41);
-            this.btnInput.TabIndex = 3;
+            this.btnInput.TabIndex = 2;
             this.btnInput.Text = "Send";
             this.btnInput.UseVisualStyleBackColor = false;
             this.btnInput.Click += new System.EventHandler(this.SendMsg);
@@ -105,9 +106,10 @@
             this.cmbMax.Location = new System.Drawing.Point(390, 107);
             this.cmbMax.Name = "cmbMax";
             this.cmbMax.Size = new System.Drawing.Size(75, 30);
-            this.cmbMax.TabIndex = 1;
+            this.cmbMax.TabIndex = 3;
             this.cmbMax.Text = "Max";
             this.cmbMax.SelectedIndexChanged += new System.EventHandler(this.SetMax);
+            this.cmbMax.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BlockInput);
             // 
             // panel1
             // 
@@ -126,14 +128,16 @@
             this.rtxChat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxChat.Font = new System.Drawing.Font("ONE 모바일고딕 Regular", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rtxChat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.rtxChat.Location = new System.Drawing.Point(10, 10);
+            this.rtxChat.Location = new System.Drawing.Point(0, 7);
             this.rtxChat.Margin = new System.Windows.Forms.Padding(10);
             this.rtxChat.Name = "rtxChat";
             this.rtxChat.ReadOnly = true;
             this.rtxChat.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.rtxChat.Size = new System.Drawing.Size(391, 219);
+            this.rtxChat.ShowSelectionMargin = true;
+            this.rtxChat.Size = new System.Drawing.Size(401, 232);
             this.rtxChat.TabIndex = 17;
             this.rtxChat.Text = "";
+            this.rtxChat.WordWrap = false;
             // 
             // label5
             // 

@@ -38,6 +38,7 @@ namespace SocketClient
             {
                 MessageBox.Show("최대 메시지 갯수를 정해주세요.", ""
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbMax.Select();
             }
             else if ((txtMsg.Text).Equals(""))
             {
@@ -87,6 +88,8 @@ namespace SocketClient
         {
             msgList.Add(msg);
             rtxChat.Text += msg;
+            rtxChat.SelectionStart = rtxChat.Text.Length;
+            rtxChat.ScrollToCaret();
 
             if (msgList.Count > max)
             {
@@ -109,6 +112,8 @@ namespace SocketClient
             {
                 rtxChat.Text += msgList[i];
             }
+            rtxChat.SelectionStart = rtxChat.Text.Length;
+            rtxChat.ScrollToCaret();
         }
 
         /*
@@ -118,6 +123,7 @@ namespace SocketClient
         private void SetMax(object sender, EventArgs e)
         {
             max = Convert.ToInt32(cmbMax.SelectedItem);
+            txtMsg.Select();
         }
 
         /*
@@ -139,6 +145,15 @@ namespace SocketClient
         private void Quit(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        /*
+            BlockInput; 입력 막기
+            1. SuppressKeyPress를 true로 설정함.
+         */
+        private void BlockInput(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
         }
     }
 }
