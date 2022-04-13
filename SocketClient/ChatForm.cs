@@ -48,7 +48,11 @@ namespace SocketClient
             }
             else
             {
-                AddMsg(txtMsg.Text + "\n");
+                String msg = String.Format($"나: {txtMsg.Text} {DateTime.Now.ToString("[HH:mm:ss]")}\n");
+/*                                            , "나"
+                                            , "txtMsg.Text"
+                                            , DateTime.Now.ToString("[HH:mm:ss]"));*/
+                AddMsg(msg);
                 Communicate(txtMsg.Text);
                 txtMsg.Text = "";
             }
@@ -71,7 +75,7 @@ namespace SocketClient
 
             msgData = new Byte[256];
             Int32 bytes = client.GetStream().Read(msgData, 0, msgData.Length);
-            echo = System.Text.Encoding.UTF8.GetString(msgData, 0, bytes);
+            echo = "서버: " + System.Text.Encoding.UTF8.GetString(msgData, 0, bytes);
 
             if (echo != null)
             {
