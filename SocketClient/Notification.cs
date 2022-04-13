@@ -19,7 +19,7 @@ namespace SocketClient
 
         public void DisplayWarning(string text)
         {
-            MessageBox.Show(text + "를 확인해주세요.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(text + "(을)를 확인해주세요.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace SocketClient
     {
         TcpClient client;
         ArrayList msgList;
+        Notification box;
 
         String echo;
         int max;
@@ -21,7 +22,8 @@ namespace SocketClient
         public ChatForm(TcpClient client)
         {
             this.client = client;
-            this.msgList = new ArrayList(200);
+            msgList = new ArrayList(200);
+            box = new Notification();
             InitializeComponent();
         }
 
@@ -36,22 +38,19 @@ namespace SocketClient
         {
             if (max == 0)
             {
-                Message.Show("최대 메시지 갯수를 정해주세요.", ""
-                                , MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                box.DisplayWarning("최대 메시지 갯수");
                 cmbMax.Select();
                 cmbMax.DroppedDown = true;
             }
             else if ((txtMsg.Text).Equals(""))
             {
-                Message.Show("메시지를 입력해주세요.", ""
-                                , MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                box.DisplayWarning("입력 메시지");
             }
             else
             {
-                String msg = String.Format($"나: {txtMsg.Text} {DateTime.Now.ToString("[HH:mm:ss]")}\n");
-/*                                            , "나"
-                                            , "txtMsg.Text"
-                                            , DateTime.Now.ToString("[HH:mm:ss]"));*/
+                String msg = String.Format("나: {0} [{1}]\n"
+                                            , txtMsg.Text
+                                            , DateTime.Now.ToString("HH:mm:ss"));
                 AddMsg(msg);
                 Communicate(txtMsg.Text);
                 txtMsg.Text = "";
@@ -107,14 +106,15 @@ namespace SocketClient
          */
         private void UpdateChat()
         {
-            if (msgList.Count <= max) return;
-
-            msgList.RemoveRange(0, msgList.Count - max);
-            rtxChat.Text = "";
-
-            for (int i = 0; i < msgList.Count; i++)
+            if (msgList.Count > max)
             {
-                rtxChat.Text += msgList[i];
+                msgList.RemoveRange(0, msgList.Count - max);
+                rtxChat.Text = "";
+
+                for (int i = 0; i < msgList.Count; i++)
+                {
+                    rtxChat.Text += msgList[i];
+                }
             }
 
             rtxChat.SelectionStart = rtxChat.Text.Length;
@@ -145,33 +145,12 @@ namespace SocketClient
         }
 
         /*
-            IsEnterKey
-            1. if문 입력 키가 엔터인지?
-                > SendMsg 호출
-         */
-        private void IsEnterKey(ComboBox sender, KeyEventArgs e)
-        {
-            if (e.KeyCode != Keys.Enter) return;
-            UpdateChat();
-            txtMsg.Select();
-        }
-
-        /*
             Quit
             1. 어플리케이션을 종료함.
          */
         private void Quit(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        /*
-            BlockInput; 입력 막기
-            1. SuppressKeyPress를 true로 설정함.
-         */
-        private void BlockInput(object sender, KeyEventArgs e)
-        {
- //           e.SuppressKeyPress = true;
         }
     }
 }

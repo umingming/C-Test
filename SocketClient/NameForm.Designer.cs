@@ -111,7 +111,6 @@
             this.MinimumSize = new System.Drawing.Size(542, 561);
             this.Name = "NameForm";
             this.ShowIcon = false;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Quit);
             this.ResumeLayout(false);
             this.PerformLayout();
 
