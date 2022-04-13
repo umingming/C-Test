@@ -10,22 +10,24 @@ namespace SocketClient
      */
     public partial class MainForm : Form
     {
-        Message msg;
+        Notification box;
 
         public MainForm()
         {
-            msg = new Message();
+            box = new Notification();
             InitializeComponent();
         }
 
         /*
             Start 메소드; start 버튼을 클릭하면 서버에 접속
-            1. 텍스트 박스의 텍스트를 변수에 초기화
-            2. IP, Port를 매개로 서버에 연결. if문을 사용한 예외처리 하는 게 나은지?
-            3. client를 인자로 NameForm 열고, 해당 폼은 닫기
-            4. 예외 처리
-                > 잘못된 port 번호; 숫자가 아니거나, 서버가 열리지 않은 경우
+            1. ip와 port 변수 선언 후 해당 텍스트를 초기화
+            2. if문 port가 범위 내인지?
+                > ip, port를 매개로 Connect 호출
+                > 범위 내가 아니면 FormatException 예외 생성
+            3. 예외 처리; box 객체의 Display 메소드 사용
+                > 잘못된 port 번호; 범위 내의 숫자가 아니거나, 서버가 열리지 않음.
                 > IP가 올바르지 않은 경우
+                > 그 외 오류
          */
         private void Start(object sender, EventArgs e)
         {
@@ -45,22 +47,22 @@ namespace SocketClient
             }
             catch (FormatException)
             {
-                msg.DisplayWarning("Port 번호");
+                box.DisplayWarning("Port 번호");
             }
             catch (SocketException)
             {
-                msg.DisplayWarning("접속 정보");
+                box.DisplayWarning("접속 정보");
             }
             catch (Exception)
             {
-                msg.DisplayError();
+                box.DisplayError();
             }
         }
 
         /*
             Connect 메소드; 서버에 접속
             1. IP, Port를 매개로 서버에 연결.
-            2. client를 인자로 NameForm 열고, 해당 폼은 닫기
+            2. client를 인자로 NameForm 열고, 해당 폼은 숨기기
          */
         private void Connect(string ip, int port)
         {
@@ -71,7 +73,7 @@ namespace SocketClient
         }
 
         /*
-            IsEnterKey
+            IsEnterKey; port 박스에서 엔터를 누를 경우 실행시킴
             1. if문 입력 키가 엔터가 아닌지?
                 > return
             2. Start 호출
@@ -79,7 +81,7 @@ namespace SocketClient
         private void IsEnterKey(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
-
+            
             Start(sender, e);
         }
 
