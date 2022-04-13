@@ -28,33 +28,59 @@ namespace SocketClient
         }
 
         /*
-            SendMsg
-            1. if문 메시지 내용을 msg 변수에 초기화 후, 값이 존재하는지
-                > Communication 메소드 호출
-                > 텍스트 박스 비움.
-            2. 입력 값이 없을 경우 안내
+            EnterMsg
+            1. if문 max가 0인지?
+                > 최대 메시지 갯수 설정 경고 
+                > SelectMax 호출 후 리턴함.
+            2. if문 텍스트가 존재 안 하는지?
+                > 메시지 입력 경고 후 리턴
+            3. SetMsg 호출함.
          */
-        private void SendMsg(object sender, EventArgs e)
+        private void EnterMsg(object sender, EventArgs e)
         {
             if (max == 0)
             {
                 box.DisplayWarning("최대 메시지 갯수");
-                cmbMax.Select();
-                cmbMax.DroppedDown = true;
+                SelectMax();
+                return;
             }
-            else if ((txtMsg.Text).Equals(""))
+            if ((txtMsg.Text).Equals(""))
             {
                 box.DisplayWarning("입력 메시지");
+                return;
             }
-            else
-            {
-                String msg = String.Format("나: {0} [{1}]\n"
-                                            , txtMsg.Text
-                                            , DateTime.Now.ToString("HH:mm:ss"));
-                AddMsg(msg);
-                Communicate(txtMsg.Text);
-                txtMsg.Text = "";
-            }
+
+            SetMsg();
+        }
+
+        /*
+            SelectMax
+            1. cmbMax에 포커싱함.
+            2. 콤보 박스의 리스트 열기
+            3. 스타일을 DropDownList로 변경
+         */
+        private void SelectMax()
+        {
+            cmbMax.Select();
+            cmbMax.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMax.DroppedDown = true;
+        }
+
+        /*
+            SetMsg
+            1. 발신 메시지를 형식화 해서 msg 변수에 초기화함.
+            2. msg를 매개로 AddMsg 호출함.
+            3. Communicate 호출
+            4. txtMsg의 텍스트 비우기
+         */
+        private void SetMsg()
+        {
+            String msg = String.Format("나: {0} [{1}]\n"
+                                        , txtMsg.Text
+                                        , DateTime.Now.ToString("HH:mm:ss"));
+            AddMsg(msg);
+            Communicate();
+            txtMsg.Text = "";
         }
 
         /*
@@ -66,43 +92,44 @@ namespace SocketClient
             5. if문 echo가 null이 아닌지?
                 > AddMsg 호출
          */
-        private void Communicate(String msg)
+        private void Communicate()
         {
-            byte[] msgData = new byte[msg.Length];
-            msgData = Encoding.UTF8.GetBytes(msg + "\n");
-            client.GetStream().Write(msgData, 0, msgData.Length);
+            byte[] msg = new byte[txtMsg.TextLength];
+            msg = Encoding.UTF8.GetBytes(txtMsg.Text + "\n");
+            client.GetStream().Write(msg, 0, msg.Length);
 
-            msgData = new Byte[256];
-            Int32 bytes = client.GetStream().Read(msgData, 0, msgData.Length);
-            echo = "서버: " + System.Text.Encoding.UTF8.GetString(msgData, 0, bytes);
+            msg = new Byte[256];
+            Int32 bytes = client.GetStream().Read(msg, 0, msg.Length);
+            echo = System.Text.Encoding.UTF8.GetString(msg, 0, bytes);
 
             if (echo != null)
             {
-                AddMsg(echo);
+                AddMsg("서버: " + echo);
             }
         }
-
+        
         /*
             AddMsg
             1. echo를 msgList와 콤보 박스, 대화 내용에 추가함.
-            2. if msgList의 크기가 최대 값을 초과하는지?
-                > 입력을 막고 삭제를 보이게 함.
+            2. UpdateChat 호출
          */
         private void AddMsg(String msg)
         {
             msgList.Add(msg);
             rtxChat.Text += msg;
-            rtxChat.SelectionStart = rtxChat.Text.Length;
-            rtxChat.ScrollToCaret();
 
             UpdateChat();
         }
 
         /*
-            UpdateChat
-            1. 대화 박스 초기화
-            2. for문 ArrayList의 크기 반복
-                > 대화 내용에 해당 요소 추가
+            UpdateChat; 범위 내의 최신 대화를 보여줄 것.
+            1. if문 메시지 리스트의 수가 최대값을 초과하는지?
+                > list의 0번째 요소부터 초과하는 만틈 삭제함.
+                > 채팅 박스 초기화
+                > for문 리스트 크기 반복
+                    > list의 요소를 채팅 박스에 추가함.
+            2. 채팅 박스의 캐럿 위치를 문자열 끝으로 설정
+            3. 스크롤을 미틍로 이동함.
          */
         private void UpdateChat()
         {
@@ -124,6 +151,8 @@ namespace SocketClient
         /*
             SetMax; 콤보박스의 선택 값에 따라 메시지 보관 갯수를 설정함.
             1. 콤보 박스 값을 int로 변환해 max 변수에 초기화함.
+            2. UpdateChat 호출
+            3. 메시지 입력으로 포커스 이동
          */
         private void SetMax(object sender, EventArgs e)
         {
@@ -136,12 +165,12 @@ namespace SocketClient
         /*
             IsEnterKey
             1. if문 입력 키가 엔터인지?
-                > SendMsg 호출
+                > EnterMsg 호출
          */
         private void IsEnterKey(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
-            SendMsg(sender, e);
+            EnterMsg(sender, e);
         }
 
         /*

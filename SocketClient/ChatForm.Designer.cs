@@ -83,7 +83,7 @@
             this.btnInput.TabIndex = 2;
             this.btnInput.Text = "Send";
             this.btnInput.UseVisualStyleBackColor = false;
-            this.btnInput.Click += new System.EventHandler(this.SendMsg);
+            this.btnInput.Click += new System.EventHandler(this.EnterMsg);
             // 
             // cmbMax
             // 
