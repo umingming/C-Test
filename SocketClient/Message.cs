@@ -5,8 +5,8 @@ using System.Windows.Forms;
 
 namespace SocketClient
 {
-    internal class Message
-    {
+    internal class NotificationBox
+
         public void DisplayError(string text)
         {
             MessageBox.Show(text + "오류 입니다.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
