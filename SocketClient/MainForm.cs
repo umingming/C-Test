@@ -10,8 +10,11 @@ namespace SocketClient
      */
     public partial class MainForm : Form
     {
+        Message msg;
+
         public MainForm()
         {
+            msg = new Message();
             InitializeComponent();
         }
 
@@ -42,15 +45,15 @@ namespace SocketClient
             }
             catch (FormatException)
             {
-                DisplayError("올바른 Port 번호를 입력해주세요.");
+                msg.DisplayWarning("Port 번호");
             }
             catch (SocketException)
             {
-                DisplayError("접속 정보를 확인해주세요.");
+                msg.DisplayWarning("접속 정보");
             }
             catch (Exception)
             {
-                DisplayError("알 수 없는 오류입니다.");
+                msg.DisplayError();
             }
         }
 
@@ -65,15 +68,6 @@ namespace SocketClient
             client.Connect(ip, port);
             (new NameForm(client)).Show();
             this.Visible = false;
-        }
-
-        /*
-            DisplayError
-            1. 에러의 내용을 메시지 박스로 안내함.
-         */
-        private void DisplayError(string text)
-        {
-            MessageBox.Show(text, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /*

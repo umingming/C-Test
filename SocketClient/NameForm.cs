@@ -42,7 +42,7 @@ namespace SocketClient
             }
             else
             {
-                MessageBox.Show("이름을 입력해주세요.", ""
+                Message.Show("이름을 입력해주세요.", ""
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

@@ -36,14 +36,14 @@ namespace SocketClient
         {
             if (max == 0)
             {
-                MessageBox.Show("최대 메시지 갯수를 정해주세요.", ""
+                Message.Show("최대 메시지 갯수를 정해주세요.", ""
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbMax.Select();
                 cmbMax.DroppedDown = true;
             }
             else if ((txtMsg.Text).Equals(""))
             {
-                MessageBox.Show("메시지를 입력해주세요.", ""
+                Message.Show("메시지를 입력해주세요.", ""
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
