@@ -16,7 +16,6 @@ namespace SocketClient
         ArrayList msgList;
         Notification box;
 
-        String echo;
         int max;
 
         public ChatForm(TcpClient client)
@@ -41,7 +40,7 @@ namespace SocketClient
             if (max == 0)
             {
                 box.DisplayWarning("최대 메시지 갯수");
-                SelectMax();
+                SelectMax(sender, e);
                 return;
             }
             if ((txtMsg.Text).Equals(""))
@@ -59,7 +58,7 @@ namespace SocketClient
             2. 콤보 박스의 리스트 열기
             3. 스타일을 DropDownList로 변경
          */
-        private void SelectMax()
+        private void SelectMax(object sender, EventArgs e)
         {
             cmbMax.Select();
             cmbMax.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -100,7 +99,7 @@ namespace SocketClient
 
             msg = new Byte[256];
             Int32 bytes = client.GetStream().Read(msg, 0, msg.Length);
-            echo = System.Text.Encoding.UTF8.GetString(msg, 0, bytes);
+            String echo = System.Text.Encoding.UTF8.GetString(msg, 0, bytes);
 
             if (echo != null)
             {

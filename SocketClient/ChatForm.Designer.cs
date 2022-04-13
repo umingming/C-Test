@@ -111,6 +111,7 @@
             this.cmbMax.TabIndex = 3;
             this.cmbMax.Text = "Max";
             this.cmbMax.DropDownClosed += new System.EventHandler(this.SetMax);
+            this.cmbMax.Enter += new System.EventHandler(this.SelectMax);
             // 
             // panel1
             // 
