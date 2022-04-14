@@ -43,7 +43,7 @@ namespace SocketClient
                 SelectMax(sender, e);
                 return;
             }
-            if ((txtMsg.Text).Equals(""))
+            else if ((txtMsg.Text).Equals(""))
             {
                 box.DisplayWarning("입력 메시지");
                 return;
