@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Sockets;
 using System.Text;
 
@@ -14,9 +15,14 @@ namespace ConsoleClientEx3
         String ip;
         int port;
 
+        StreamReader reader;
+        StreamWriter writer;
+
         private Program()
         {
             accessServer();
+            writer = new StreamWriter(client.GetStream());
+            reader = new StreamReader(client.GetStream());
 
             if(client != null)
             {
@@ -29,26 +35,17 @@ namespace ConsoleClientEx3
         {
             while((msg = Console.ReadLine()) != null)
             {
-                byte[] byteData = new byte[msg.Length];
-                byteData = Encoding.UTF8.GetBytes(msg + "\n");
-                client.GetStream().Write(byteData, 0, byteData.Length);
+                writer.WriteLine(msg);
+                writer.Flush();
 
-                byteData = new Byte[256];
-                String responseData = String.Empty;
-                Int32 bytes = client.GetStream().Read(byteData, 0, byteData.Length);
-                responseData = System.Text.Encoding.UTF8.GetString(byteData, 0, bytes);
-
-                Console.Write("{0} ☞ ", responseData);
-
-//              Console.Write("{0} \n ☞ ", msg);
+                Console.Write("{0} ☞ ", reader.ReadLine());
             }
         }
 
         private void setClient()
         {
-            byte[] byteData = new byte[name.Length];
-            byteData = Encoding.UTF8.GetBytes(name + "\n");
-            client.GetStream().Write(byteData, 0, byteData.Length);
+            writer.WriteLine(name);
+            writer.Flush();
 
             Console.Write("[통신 시작] {0}님 환영합니다. \n ☞ ", name);
         }
