@@ -10,7 +10,8 @@ namespace SocketClient
      */
     public partial class MainForm : Form
     {
-        Notification box;
+        private Client client;
+        private Notification box;
 
         public MainForm()
         {
@@ -38,7 +39,9 @@ namespace SocketClient
 
                 if(port > 0 && port < 65536)
                 {
-                    Connect(ip, port);
+                    client = new Client(ip, port);
+                    (new NameForm(client)).Show();
+                    this.Visible = false;
                 }
                 else
                 {
@@ -49,27 +52,10 @@ namespace SocketClient
             {
                 box.DisplayWarning("Port 번호");
             }
-            catch (SocketException)
-            {
-                box.DisplayWarning("접속 정보");
-            }
             catch (Exception)
             {
                 box.DisplayError();
             }
-        }
-
-        /*
-            Connect 메소드; 서버에 접속
-            1. IP, Port를 매개로 서버에 연결.
-            2. client를 인자로 NameForm 열고, 해당 폼은 숨기기
-         */
-        private void Connect(string ip, int port)
-        {
-            TcpClient client = new TcpClient();
-            client.Connect(ip, port);
-            (new NameForm(client)).Show();
-            this.Visible = false;
         }
 
         /*
