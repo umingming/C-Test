@@ -95,7 +95,7 @@ namespace SocketClient
 
             if (echo != null)
             {
-                AddMsg("서버: " + echo);
+                AddMsg(echo + "\n");
             }
         }
         
