@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net.Sockets;
 using System.Windows.Forms;
 
 namespace SocketClient
@@ -37,16 +36,14 @@ namespace SocketClient
                 String ip = txtIp.Text;
                 int port = Convert.ToInt32(txtPort.Text);
 
-                if(port > 0 && port < 65536)
-                {
-                    client = new Client(ip, port);
-                    (new NameForm(client)).Show();
-                    this.Visible = false;
-                }
-                else
+                if(port < 0 || port > 65535)
                 {
                     throw new FormatException();
                 }
+
+                client = new Client(ip, port);
+                (new NameForm(client)).Show();
+                this.Visible = false;
             }
             catch (FormatException)
             {

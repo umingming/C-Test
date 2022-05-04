@@ -11,10 +11,10 @@ namespace SocketClient
      */
     public partial class NameForm : Form
     {
-        TcpClient client;
+        Client client;
         Notification box;
 
-        public NameForm(TcpClient client)
+        public NameForm(Client client)
         {
             this.client = client;
             box = new Notification();
@@ -32,7 +32,7 @@ namespace SocketClient
         {
             if(!txtName.Text.Equals(""))
             {
-                SetName();
+                client.SetName(txtName.Text);
         
                 (new ChatForm(client)).Show();
                 this.Visible = false;
@@ -41,18 +41,6 @@ namespace SocketClient
             {
                 box.DisplayWarning("이름 입력");
             }
-        }
-
-        /*
-            SetName 메소드
-            1. 입력 값을 byte로 형변환해 저장
-            2. 서버에 byte 배열 전송
-         */
-        private void SetName()
-        {
-            byte[] name = new byte[txtName.TextLength];
-            name = Encoding.UTF8.GetBytes(txtName.Text + "\n");
-            client.GetStream().Write(name, 0, name.Length);
         }
 
         /*

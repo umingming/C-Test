@@ -6,14 +6,13 @@ using System.Text;
 
 namespace SocketClient
 {
-    internal class Client
+    public class Client
     {
 		private TcpClient client;
 		private StreamWriter sender;
 		private StreamReader receiver;
 		private Notification box;
 		private String name;
-
 
 		/*
 			생성자 정의

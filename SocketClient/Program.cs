@@ -17,6 +17,7 @@ namespace SocketClient
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            String text = "유미";
             new MainForm().Show(); 
             Application.Run();
         }

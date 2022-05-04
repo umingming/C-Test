@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Net.Sockets;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SocketClient
@@ -12,13 +10,13 @@ namespace SocketClient
      */
     public partial class ChatForm : Form
     {
-        TcpClient client;
+        Client client;
         ArrayList msgList;
         Notification box;
 
         int max;
 
-        public ChatForm(TcpClient client)
+        public ChatForm(Client client)
         {
             this.client = client;
             msgList = new ArrayList(200);
@@ -93,13 +91,7 @@ namespace SocketClient
          */
         private void Communicate()
         {
-            byte[] msg = new byte[txtMsg.TextLength];
-            msg = Encoding.UTF8.GetBytes(txtMsg.Text + "\n");
-            client.GetStream().Write(msg, 0, msg.Length);
-
-            msg = new Byte[256];
-            Int32 bytes = client.GetStream().Read(msg, 0, msg.Length);
-            String echo = System.Text.Encoding.UTF8.GetString(msg, 0, bytes);
+            String echo = client.Echo(txtMsg.Text);
 
             if (echo != null)
             {
