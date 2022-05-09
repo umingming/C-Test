@@ -51,6 +51,20 @@ namespace SocketClient
         }
 
         /*
+            SetMax; 콤보박스의 선택 값에 따라 메시지 보관 갯수를 설정함.
+            1. 콤보 박스 값을 int로 변환해 max 변수에 초기화함.
+            2. UpdateChat 호출
+            3. 메시지 입력으로 포커스 이동
+         */
+        private void SetMax(object sender, EventArgs e)
+        {
+            max = Convert.ToInt32(cmbMax.SelectedItem);
+
+            UpdateChat();
+            txtMsg.Select();
+        }
+
+        /*
             SelectMax
             1. cmbMax에 포커싱함.
             2. 콤보 박스의 리스트 열기
@@ -82,11 +96,8 @@ namespace SocketClient
 
         /*
             Communicate
-            1. byte 배열 생성 후, msg 저장
-            2. msg를 서버에 전송
-            3. byte 배열 초기화
-            4. 서버로부터 받은 메시지를 변환해 echo 변수에 초기화
-            5. if문 echo가 null이 아닌지?
+            1. 메시지가 매개인 echo 메소드의 반환 값으로 echo 변수를 초기화함.
+            2. if문 echo가 null이 아닌지?
                 > AddMsg 호출
          */
         private void Communicate()
@@ -115,12 +126,12 @@ namespace SocketClient
         /*
             UpdateChat; 범위 내의 최신 대화를 보여줄 것.
             1. if문 메시지 리스트의 수가 최대값을 초과하는지?
-                > list의 0번째 요소부터 초과하는 만틈 삭제함.
+                > list의 0번째 요소부터 초과하는 만큼 삭제함.
                 > 채팅 박스 초기화
                 > for문 리스트 크기 반복
                     > list의 요소를 채팅 박스에 추가함.
             2. 채팅 박스의 캐럿 위치를 문자열 끝으로 설정
-            3. 스크롤을 미틍로 이동함.
+            3. 스크롤을 밑으로 이동함.
          */
         private void UpdateChat()
         {
@@ -137,20 +148,6 @@ namespace SocketClient
 
             rtxChat.SelectionStart = rtxChat.Text.Length;
             rtxChat.ScrollToCaret();
-        }
-
-        /*
-            SetMax; 콤보박스의 선택 값에 따라 메시지 보관 갯수를 설정함.
-            1. 콤보 박스 값을 int로 변환해 max 변수에 초기화함.
-            2. UpdateChat 호출
-            3. 메시지 입력으로 포커스 이동
-         */
-        private void SetMax(object sender, EventArgs e)
-        {
-            max = Convert.ToInt32(cmbMax.SelectedItem);
-
-            UpdateChat();
-            txtMsg.Select();
         }
 
         /*
