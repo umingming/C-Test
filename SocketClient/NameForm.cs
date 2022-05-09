@@ -49,7 +49,7 @@ namespace SocketClient
          */
         private void IsEnterKey(object sender, KeyEventArgs e)
         {
-            if (!e.Alt || e.KeyCode != Keys.Enter) return;
+            if (e.KeyCode != Keys.Enter) return;
 
             EnterName(sender, e);
         }
