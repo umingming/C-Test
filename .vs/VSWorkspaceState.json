@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\ConsoleClientEx1",
-    "\\ConsoleClientEx2",
-    "\\ConsoleClientEx3",
-    "\\ConsoleEx1",
-    "\\ConsoleEx2",
-    "\\ConsoleEx3",
-    "\\ConsoleServerEx1",
-    "\\SocketClientTest",
-    "\\SocketClientTest2"
+    ""
   ],
-  "SelectedNode": "\\ConsoleClientEx1\\Program.cs",
+  "SelectedNode": "\\SocketClient.sln",
   "PreviewInSolutionExplorer": false
 }
