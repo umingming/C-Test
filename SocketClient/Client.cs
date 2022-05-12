@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
 using System.Net.Sockets;
+using System.Threading;
 
 namespace SocketClient
 {
@@ -10,7 +12,9 @@ namespace SocketClient
 		private StreamWriter sender;
 		private StreamReader receiver;
 		private Notification box;
+		private ArrayList msgList = new ArrayList();
 		private string name;
+		private int index;
 
 		/*
 			생성자 정의
@@ -26,6 +30,8 @@ namespace SocketClient
 				this.sender = new StreamWriter(client.GetStream());
 				this.receiver = new StreamReader(client.GetStream());
 				this.box = new Notification();
+
+				Thread receiverThead = new Thread(() => ReceiveMsg());
             }
 			catch (SocketException)
 			{
@@ -37,12 +43,14 @@ namespace SocketClient
 			}
 		}
 
-		/*
+
+
+        /*
 			SetName
 			1. 인자 값을 name 필드 변수에 할당함.
 			2. name 변수를 서버에 전송 
 		 */
-		public void SetName(string name)
+        public void SetName(string name)
         {
 			try
             {
@@ -74,6 +82,34 @@ namespace SocketClient
 				return null;
             }
 		}
+
+		public void SendMsg(string msg)
+		{
+			try
+			{
+				sender.WriteLine(msg);
+				sender.Flush();
+			}
+			catch (IOException)
+			{
+				box.DisplayError("메시지 전송");
+			}
+		}
+
+		public void ReceiveMsg()
+        {
+			try
+            {
+                while (true)
+                {
+					msgList.Add(receiver.ReadLine());
+                }
+            }
+			catch (IOException)
+            {
+				box.DisplayError("메시지 수신");
+            }
+        }
 
 		/*
 			Close

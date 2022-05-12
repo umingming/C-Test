@@ -47,7 +47,8 @@ namespace SocketClient
                 return;
             }
 
-            SetMsg();
+            client.SendMsg(txtMsg.Text);
+            txtMsg.Text = "";
         }
 
         /*
@@ -102,7 +103,9 @@ namespace SocketClient
          */
         private void Communicate()
         {
+            client.SendMsg(txtMsg.Text);
             string echo = client.Echo(txtMsg.Text);
+            txtMsg.Text = "";
 
             if (echo != null)
             {
@@ -119,7 +122,7 @@ namespace SocketClient
         {
             msgList.Add(msg);
             rtxChat.Text += msg;
-
+            
             UpdateChat();
         }
 
@@ -135,6 +138,8 @@ namespace SocketClient
          */
         private void UpdateChat()
         {
+            ReceiveMsg();
+
             if (msgList.Count > max)
             {
                 msgList.RemoveRange(0, msgList.Count - max);
@@ -148,6 +153,16 @@ namespace SocketClient
 
             rtxChat.SelectionStart = rtxChat.Text.Length;
             rtxChat.ScrollToCaret();
+        }
+
+        private void ReceiveMsg()
+        {
+            string msg = client.ReceiveMsg();
+
+            if(msg != null)
+            {
+                AddMsg(msg);
+            }
         }
 
         /*
