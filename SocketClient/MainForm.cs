@@ -31,7 +31,7 @@ namespace SocketClient
         {
             try
             {
-                String ip = txtIp.Text;
+                string ip = txtIp.Text;
                 int port = Convert.ToInt32(txtPort.Text);
 
                 client = new Client(ip, port);
@@ -49,12 +49,12 @@ namespace SocketClient
         }
 
         /*
-            IsEnterKey; port 박스에서 엔터를 누를 경우 실행시킴
+            StartByEnterKeyDown; port 박스에서 엔터를 누를 경우 실행시킴
             1. if문 입력 키가 엔터가 아닌지?
                 > return
             2. Start 호출
          */
-        private void IsEnterKey(object sender, KeyEventArgs e)
+        private void StartByEnterKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
             

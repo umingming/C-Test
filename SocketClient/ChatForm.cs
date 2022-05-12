@@ -86,7 +86,7 @@ namespace SocketClient
          */
         private void SetMsg()
         {
-            String msg = String.Format("나: {0} [{1}]\n"
+            string msg = string.Format("나: {0} [{1}]\n"
                                         , txtMsg.Text
                                         , DateTime.Now.ToString("HH:mm:ss"));
             AddMsg(msg);
@@ -102,7 +102,7 @@ namespace SocketClient
          */
         private void Communicate()
         {
-            String echo = client.Echo(txtMsg.Text);
+            string echo = client.Echo(txtMsg.Text);
 
             if (echo != null)
             {
@@ -151,13 +151,14 @@ namespace SocketClient
         }
 
         /*
-            IsEnterKey
+            EnterMsgByEnterKeyDown
             1. if문 입력 키가 엔터인지?
-                > EnterMsg 호출
+            2. EnterMsg 호출
          */
-        private void IsEnterKey(object sender, KeyEventArgs e)
+        private void EnterMsgByEnterKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+
             EnterMsg(sender, e);
         }
 
@@ -168,6 +169,7 @@ namespace SocketClient
         private void Quit(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+            client.Close();
         }
     }
 }

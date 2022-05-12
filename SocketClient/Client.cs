@@ -10,7 +10,7 @@ namespace SocketClient
 		private StreamWriter sender;
 		private StreamReader receiver;
 		private Notification box;
-		private String name;
+		private string name;
 
 		/*
 			생성자 정의
@@ -18,7 +18,7 @@ namespace SocketClient
 			2. 소켓의 스트림을 인자로, 스트림 생성자를 호출해 I/O스트림 초기화함.
 			3. 예외처리; 불가능한 Port, IP일 경우
 		 */
-		public Client(String ip, int port)
+		public Client(string ip, int port)
         {
 			try
             {
@@ -42,7 +42,7 @@ namespace SocketClient
 			1. 인자 값을 name 필드 변수에 할당함.
 			2. name 변수를 서버에 전송 
 		 */
-		public void SetName(String name)
+		public void SetName(string name)
         {
 			try
             {
@@ -60,7 +60,7 @@ namespace SocketClient
 			1. 메시지를 서버에 전송함.
 			2. 서버로 부터 읽은 값을 리턴함.
 		 */
-		public String Echo(String msg)
+		public string Echo(string msg)
         {
 			try
             {

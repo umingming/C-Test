@@ -69,7 +69,7 @@
             this.txtMsg.Name = "txtMsg";
             this.txtMsg.Size = new System.Drawing.Size(208, 17);
             this.txtMsg.TabIndex = 1;
-            this.txtMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IsEnterKey);
+            this.txtMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterMsgByEnterKeyDown);
             // 
             // btnInput
             // 
