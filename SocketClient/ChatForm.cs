@@ -10,9 +10,9 @@ namespace SocketClient
      */
     public partial class ChatForm : Form
     {
-        Client client;
-        ArrayList msgList;
-        Notification box;
+        private Client client;
+        private ArrayList msgList;
+        private Notification box;
 
         int max;
 
