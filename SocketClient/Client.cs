@@ -9,12 +9,11 @@ namespace SocketClient
     public class Client
     {
 		private TcpClient client;
-		private StreamWriter sender;
-		private StreamReader receiver;
+		private BinaryWriter sender;
+		private BinaryReader receiver;
 		private Notification box;
 		private ArrayList msgList = new ArrayList();
 		private string name;
-		private int index;
 
 		/*
 			생성자 정의
@@ -27,11 +26,9 @@ namespace SocketClient
 			try
             {
 				this.client = new TcpClient(ip, port);
-				this.sender = new StreamWriter(client.GetStream());
-				this.receiver = new StreamReader(client.GetStream());
+				this.sender = new BinaryWriter(client.GetStream());
+				this.receiver = new BinaryReader(client.GetStream());
 				this.box = new Notification();
-
-				Thread receiverThead = new Thread(() => ReceiveMsg());
             }
 			catch (SocketException)
 			{
@@ -55,7 +52,12 @@ namespace SocketClient
 			try
             {
 				this.name = name;
-				sender.WriteLine(this.name);
+
+				for (int i=0; i<name.Length; i++)
+                {
+					sender.Write(name[i]);
+					sender.Flush();
+                }
             }
 			catch (IOException)
             {
@@ -72,9 +74,9 @@ namespace SocketClient
         {
 			try
             {
-				sender.WriteLine(msg);
+				sender.Write(msg);
 				sender.Flush();
-				return receiver.ReadLine();
+				return receiver.ReadString();
             }
 			catch (IOException)
             {
@@ -87,8 +89,12 @@ namespace SocketClient
 		{
 			try
 			{
-				sender.WriteLine(msg);
-				sender.Flush();
+				for (int i = 0; i < msg.Length; i++)
+				{
+					sender.Write(msg[i]);
+					sender.Flush();
+				}
+				ReceiveMsg();
 			}
 			catch (IOException)
 			{
@@ -98,17 +104,21 @@ namespace SocketClient
 
 		public void ReceiveMsg()
         {
-			try
-            {
-                while (true)
-                {
-					msgList.Add(receiver.ReadLine());
-                }
+            try { 
+				msgList.Add(receiver.ReadString());
             }
 			catch (IOException)
             {
 				box.DisplayError("메시지 수신");
             }
+        }
+
+
+		public ArrayList GetMsg()
+        {
+			ArrayList msgList = this.msgList;
+			this.msgList.Clear();
+			return msgList;
         }
 
 		/*

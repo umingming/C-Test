@@ -48,6 +48,7 @@ namespace SocketClient
             }
 
             client.SendMsg(txtMsg.Text);
+            UpdateChat();
             txtMsg.Text = "";
         }
 
@@ -118,7 +119,7 @@ namespace SocketClient
             1. echo를 msgList와 콤보 박스, 대화 내용에 추가함.
             2. UpdateChat 호출
          */
-        private void AddMsg(String msg)
+        private void AddMsg(Object msg)
         {
             msgList.Add(msg);
             rtxChat.Text += msg;
@@ -157,11 +158,11 @@ namespace SocketClient
 
         private void ReceiveMsg()
         {
-            string msg = client.ReceiveMsg();
+            ArrayList newMsgList = client.GetMsg();
 
-            if(msg != null)
+            for(int i=0; i<newMsgList.Count; i++)
             {
-                AddMsg(msg);
+                AddMsg(newMsgList[i]);
             }
         }
 
