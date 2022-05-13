@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using System.Net.Sockets;
+using System.Text;
 using System.Threading;
 
 namespace SocketClient
@@ -9,8 +10,8 @@ namespace SocketClient
     public class Client
     {
 		private TcpClient client;
-		private BinaryWriter sender;
-		private BinaryReader receiver;
+		private StreamWriter sender;
+		private StreamReader receiver;
 		private Notification box;
 		private ArrayList msgList = new ArrayList();
 		private string name;
@@ -26,8 +27,8 @@ namespace SocketClient
 			try
             {
 				this.client = new TcpClient(ip, port);
-				this.sender = new BinaryWriter(client.GetStream());
-				this.receiver = new BinaryReader(client.GetStream());
+				this.sender = new StreamWriter(client.GetStream());
+				this.receiver = new StreamReader(client.GetStream());
 				this.box = new Notification();
             }
 			catch (SocketException)
@@ -52,12 +53,9 @@ namespace SocketClient
 			try
             {
 				this.name = name;
-
-				for (int i=0; i<name.Length; i++)
-                {
-					sender.Write(name[i]);
-					sender.Flush();
-                }
+				byte[] byteData = new byte[name.Length];
+				byteData = Encoding.UTF8.GetBytes(name + "\n");
+				client.GetStream().Write(byteData, 0, byteData.Length);
             }
 			catch (IOException)
             {
@@ -74,9 +72,9 @@ namespace SocketClient
         {
 			try
             {
-				sender.Write(msg);
+				sender.WriteLine(msg);
 				sender.Flush();
-				return receiver.ReadString();
+				return receiver.ReadLine();
             }
 			catch (IOException)
             {
@@ -89,12 +87,9 @@ namespace SocketClient
 		{
 			try
 			{
-				for (int i = 0; i < msg.Length; i++)
-				{
-					sender.Write(msg[i]);
-					sender.Flush();
-				}
-				ReceiveMsg();
+				byte[] byteData = new byte[msg.Length];
+				byteData = Encoding.UTF8.GetBytes(msg + "\n");
+				client.GetStream().Write(byteData, 0, byteData.Length);
 			}
 			catch (IOException)
 			{
@@ -102,14 +97,19 @@ namespace SocketClient
 			}
 		}
 
-		public void ReceiveMsg()
+		public string ReceiveMsg()
         {
-            try { 
-				msgList.Add(receiver.ReadString());
+			try
+            {
+				byte[] byteData = new Byte[256];
+				Int32 bytes = client.GetStream().Read(byteData, 0, byteData.Length);
+				string msg = System.Text.Encoding.UTF8.GetString(byteData, 0, bytes);
+				return msg;
             }
 			catch (IOException)
             {
 				box.DisplayError("메시지 수신");
+				return null;
             }
         }
 

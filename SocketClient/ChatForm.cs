@@ -123,8 +123,6 @@ namespace SocketClient
         {
             msgList.Add(msg);
             rtxChat.Text += msg;
-            
-            UpdateChat();
         }
 
         /*
@@ -139,8 +137,6 @@ namespace SocketClient
          */
         private void UpdateChat()
         {
-            ReceiveMsg();
-
             if (msgList.Count > max)
             {
                 msgList.RemoveRange(0, msgList.Count - max);
@@ -156,13 +152,12 @@ namespace SocketClient
             rtxChat.ScrollToCaret();
         }
 
-        private void ReceiveMsg()
+        private void ReceiveMsg(object sender, KeyPressEventArgs e)
         {
-            ArrayList newMsgList = client.GetMsg();
-
-            for(int i=0; i<newMsgList.Count; i++)
+            string msg = client.ReceiveMsg();
+            if(msg != null)
             {
-                AddMsg(newMsgList[i]);
+                AddMsg(msg);
             }
         }
 
