@@ -30,6 +30,7 @@ namespace ConsoleMultiClient
             input = new NetworkStream(client);
             byte[] nameByte = Encoding.UTF8.GetBytes(name);
             input.Write(nameByte, 0, nameByte.Length);
+            input.Flush();
 
             Console.WriteLine("전송");
 
@@ -66,8 +67,8 @@ namespace ConsoleMultiClient
                 Console.WriteLine("[시스템 시작] Port 번호를 입력하세요. \n ☞ ");
                 int port = Convert.ToInt32(Console.ReadLine());
 
-                Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-                client.Connect(new IPEndPoint(IPAddress.Parse(ip), port));
+                client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+                client.Connect(new IPEndPoint(IPAddress.Loopback, port));
 
                 Console.WriteLine("[서버 접속 중] 사용자 이름을 입력해주세요. \n ☞ ");
                 name = Console.ReadLine();
