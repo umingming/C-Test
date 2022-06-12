@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\obj\Debug\DBConnections.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\obj\Debug\DBConnections.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\obj\Debug\DBConnections.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\bin\Debug\DBConnections.exe.config
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\bin\Debug\DBConnections.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\bin\Debug\DBConnections.pdb
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\obj\Debug\DBConnections.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\obj\Debug\DBConnections.pdb
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\bin\Debug\Oracle.DataAccess.dll
+C:\Users\user\source\repos\umingming\C-sharpTest\DBConnections\DBConnections\obj\Debug\DBConnections.csproj.CopyComplete
