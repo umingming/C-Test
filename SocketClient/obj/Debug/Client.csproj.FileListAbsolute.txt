@@ -1,0 +1,11 @@
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\bin\Debug\SocketClient.exe
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\SocketClient.MainForm.resources
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\SocketClient.NameForm.resources
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\SocketClient.ChatForm.resources
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\SocketClient.Properties.Resources.resources
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\SocketClient.exe
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\obj\Debug\SocketClient.pdb
+C:\Users\u_011\source\repos\C-sharpTest\SocketClient\bin\Debug\SocketClient.pdb

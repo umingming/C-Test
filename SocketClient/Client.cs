@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.IO;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 
 namespace SocketClient
 {
@@ -12,7 +13,8 @@ namespace SocketClient
 		private StreamWriter sender;
 		private StreamReader receiver;
 		private Notification box;
-		private String name;
+		private ArrayList msgList = new ArrayList();
+		private string name;
 
 		/*
 			생성자 정의
@@ -20,7 +22,7 @@ namespace SocketClient
 			2. 소켓의 스트림을 인자로, 스트림 생성자를 호출해 I/O스트림 초기화함.
 			3. 예외처리; 불가능한 Port, IP일 경우
 		 */
-		public Client(String ip, int port)
+		public Client(string ip, int port)
         {
 			try
             {
@@ -39,17 +41,21 @@ namespace SocketClient
 			}
 		}
 
-		/*
+
+
+        /*
 			SetName
 			1. 인자 값을 name 필드 변수에 할당함.
 			2. name 변수를 서버에 전송 
 		 */
-		public void SetName(String name)
+        public void SetName(string name)
         {
 			try
             {
 				this.name = name;
-				sender.WriteLine(this.name);
+				byte[] byteData = new byte[name.Length];
+				byteData = Encoding.UTF8.GetBytes(name + "\n");
+				client.GetStream().Write(byteData, 0, byteData.Length);
             }
 			catch (IOException)
             {
@@ -62,7 +68,7 @@ namespace SocketClient
 			1. 메시지를 서버에 전송함.
 			2. 서버로 부터 읽은 값을 리턴함.
 		 */
-		public String Echo(String msg)
+		public string Echo(string msg)
         {
 			try
             {
@@ -76,6 +82,44 @@ namespace SocketClient
 				return null;
             }
 		}
+
+		public void SendMsg(string msg)
+		{
+			try
+			{
+				byte[] byteData = new byte[msg.Length];
+				byteData = Encoding.UTF8.GetBytes(msg + "\n");
+				client.GetStream().Write(byteData, 0, byteData.Length);
+			}
+			catch (IOException)
+			{
+				box.DisplayError("메시지 전송");
+			}
+		}
+
+		public string ReceiveMsg()
+        {
+			try
+            {
+				byte[] byteData = new Byte[256];
+				Int32 bytes = client.GetStream().Read(byteData, 0, byteData.Length);
+				string msg = System.Text.Encoding.UTF8.GetString(byteData, 0, bytes);
+				return msg;
+            }
+			catch (IOException)
+            {
+				box.DisplayError("메시지 수신");
+				return null;
+            }
+        }
+
+
+		public ArrayList GetMsg()
+        {
+			ArrayList msgList = this.msgList;
+			this.msgList.Clear();
+			return msgList;
+        }
 
 		/*
 			Close

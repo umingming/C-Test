@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Net.Sockets;
 using System.Windows.Forms;
 
 namespace SocketClient
@@ -16,7 +14,6 @@ namespace SocketClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             new MainForm().Show(); 
             Application.Run();
         }

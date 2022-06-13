@@ -10,9 +10,9 @@ namespace SocketClient
      */
     public partial class ChatForm : Form
     {
-        Client client;
-        ArrayList msgList;
-        Notification box;
+        private Client client;
+        private ArrayList msgList;
+        private Notification box;
 
         int max;
 
@@ -47,7 +47,23 @@ namespace SocketClient
                 return;
             }
 
-            SetMsg();
+            client.SendMsg(txtMsg.Text);
+            UpdateChat();
+            txtMsg.Text = "";
+        }
+
+        /*
+            SetMax; 콤보박스의 선택 값에 따라 메시지 보관 갯수를 설정함.
+            1. 콤보 박스 값을 int로 변환해 max 변수에 초기화함.
+            2. UpdateChat 호출
+            3. 메시지 입력으로 포커스 이동
+         */
+        private void SetMax(object sender, EventArgs e)
+        {
+            max = Convert.ToInt32(cmbMax.SelectedItem);
+
+            UpdateChat();
+            txtMsg.Select();
         }
 
         /*
@@ -72,7 +88,7 @@ namespace SocketClient
          */
         private void SetMsg()
         {
-            String msg = String.Format("나: {0} [{1}]\n"
+            string msg = string.Format("나: {0} [{1}]\n"
                                         , txtMsg.Text
                                         , DateTime.Now.ToString("HH:mm:ss"));
             AddMsg(msg);
@@ -82,16 +98,15 @@ namespace SocketClient
 
         /*
             Communicate
-            1. byte 배열 생성 후, msg 저장
-            2. msg를 서버에 전송
-            3. byte 배열 초기화
-            4. 서버로부터 받은 메시지를 변환해 echo 변수에 초기화
-            5. if문 echo가 null이 아닌지?
+            1. 메시지가 매개인 echo 메소드의 반환 값으로 echo 변수를 초기화함.
+            2. if문 echo가 null이 아닌지?
                 > AddMsg 호출
          */
         private void Communicate()
         {
-            String echo = client.Echo(txtMsg.Text);
+            client.SendMsg(txtMsg.Text);
+            string echo = client.Echo(txtMsg.Text);
+            txtMsg.Text = "";
 
             if (echo != null)
             {
@@ -104,23 +119,21 @@ namespace SocketClient
             1. echo를 msgList와 콤보 박스, 대화 내용에 추가함.
             2. UpdateChat 호출
          */
-        private void AddMsg(String msg)
+        private void AddMsg(Object msg)
         {
             msgList.Add(msg);
             rtxChat.Text += msg;
-
-            UpdateChat();
         }
 
         /*
             UpdateChat; 범위 내의 최신 대화를 보여줄 것.
             1. if문 메시지 리스트의 수가 최대값을 초과하는지?
-                > list의 0번째 요소부터 초과하는 만틈 삭제함.
+                > list의 0번째 요소부터 초과하는 만큼 삭제함.
                 > 채팅 박스 초기화
                 > for문 리스트 크기 반복
                     > list의 요소를 채팅 박스에 추가함.
             2. 채팅 박스의 캐럿 위치를 문자열 끝으로 설정
-            3. 스크롤을 미틍로 이동함.
+            3. 스크롤을 밑으로 이동함.
          */
         private void UpdateChat()
         {
@@ -139,28 +152,24 @@ namespace SocketClient
             rtxChat.ScrollToCaret();
         }
 
-        /*
-            SetMax; 콤보박스의 선택 값에 따라 메시지 보관 갯수를 설정함.
-            1. 콤보 박스 값을 int로 변환해 max 변수에 초기화함.
-            2. UpdateChat 호출
-            3. 메시지 입력으로 포커스 이동
-         */
-        private void SetMax(object sender, EventArgs e)
+        private void ReceiveMsg(object sender, KeyPressEventArgs e)
         {
-            max = Convert.ToInt32(cmbMax.SelectedItem);
-
-            UpdateChat();
-            txtMsg.Select();
+            string msg = client.ReceiveMsg();
+            if(msg != null)
+            {
+                AddMsg(msg);
+            }
         }
 
         /*
-            IsEnterKey
+            EnterMsgByEnterKeyDown
             1. if문 입력 키가 엔터인지?
-                > EnterMsg 호출
+            2. EnterMsg 호출
          */
-        private void IsEnterKey(object sender, KeyEventArgs e)
+        private void EnterMsgByEnterKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+
             EnterMsg(sender, e);
         }
 
@@ -171,6 +180,7 @@ namespace SocketClient
         private void Quit(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+            client.Close();
         }
     }
 }

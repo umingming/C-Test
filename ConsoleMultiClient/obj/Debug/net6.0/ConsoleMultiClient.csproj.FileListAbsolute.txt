@@ -1,0 +1,15 @@
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\bin\Debug\net6.0\ConsoleMultiClient.exe
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\bin\Debug\net6.0\ConsoleMultiClient.deps.json
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\bin\Debug\net6.0\ConsoleMultiClient.runtimeconfig.json
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\bin\Debug\net6.0\ConsoleMultiClient.dll
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\bin\Debug\net6.0\ConsoleMultiClient.pdb
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.csproj.AssemblyReference.cache
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.AssemblyInfoInputs.cache
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.AssemblyInfo.cs
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.csproj.CoreCompileInputs.cache
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.dll
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\refint\ConsoleMultiClient.dll
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.pdb
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ConsoleMultiClient.genruntimeconfig.cache
+C:\Users\u_011\source\repos\C-sharpTest\ConsoleMultiClient\obj\Debug\net6.0\ref\ConsoleMultiClient.dll
