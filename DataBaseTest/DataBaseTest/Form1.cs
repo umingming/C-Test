@@ -28,12 +28,13 @@ namespace DataBaseTest
                                             "Password=java1234;");
             OleDbConnection conn = new OleDbConnection(connStr);
             conn.Open();
+
             String sql = "select * from temp";
             OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn);
+
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0].DefaultView;
-
         }
     }
 }
