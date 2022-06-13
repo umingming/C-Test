@@ -29,12 +29,23 @@ namespace DataBaseTest
             OleDbConnection conn = new OleDbConnection(connStr);
             conn.Open();
 
-            String sql = "select * from temp";
+            String sql = "select count(*) from temp";
             OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn);
+
+            OleDbCommand cmd = new OleDbCommand(sql, conn);
+
+            OleDbDataReader reader = cmd.ExecuteReader();
+            
+            if(reader.Read())
+            {
+                textBox1.Text = reader.GetValue(0) + "";
+            }
+
 
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            
         }
     }
 }
