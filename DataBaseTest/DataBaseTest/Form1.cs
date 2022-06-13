@@ -38,7 +38,7 @@ namespace DataBaseTest
             
             if(reader.Read())
             {
-                textBox1.Text = reader.GetValue(0) + "";
+                textBox1.Text = reader.GetValue(0).ToString();
             }
 
 
