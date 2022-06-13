@@ -10,21 +10,29 @@ namespace DBConnections
 {
     internal class Program
     {
-        private static string provider = "OraOLEDB.Oracle";
-        private static string dataSource = "orcl.mdb"; // 뭘로 해도 에러가 안 나네;
-        private static string userId = "runch";
-        private static string password = "java1234";
-
         public static OleDbConnection connection;
 
         static void Main(string[] args)
         {
-            string connectionString = "Provider=MSDAORA.1;Data Source=orcl;User Id=runch;Password=java1234";
+            string connectionString = string.Format("Provider=OraOLEDB.Oracle;" +
+            "OLEDB.NET=true;" +
+            "PLSQLRSet=true;" +
+            "Data Source=orcl;" +
+            "User Id=runch;" +
+            "Password=java1234;");
 
-            connection = new OleDbConnection(connectionString);
-            connection.Open();
-            Console.Write("[서버 접속 중] 사용자 이름을 입력해주세요. \n ☞ ");
-            String name = Console.ReadLine();
+            try
+            {
+                connection = new OleDbConnection(connectionString);
+                connection.Open();
+                Console.Write("[성공]");
+                Console.ReadLine();
+            }
+            catch
+            {
+                Console.Write("[실패]");
+                Console.ReadLine();
+            }
         }
     }
 }
