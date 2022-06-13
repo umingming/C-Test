@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\bin\Debug\DataBaseTest.exe.config
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\bin\Debug\DataBaseTest.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\bin\Debug\DataBaseTest.pdb
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\bin\Debug\System.Data.OleDb.dll
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\bin\Debug\System.Data.OleDb.xml
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.Form1.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.Properties.Resources.resources
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.csproj.GenerateResource.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.csproj.CopyComplete
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.exe
+C:\Users\user\source\repos\umingming\C-sharpTest\DataBaseTest\DataBaseTest\obj\Debug\DataBaseTest.pdb
